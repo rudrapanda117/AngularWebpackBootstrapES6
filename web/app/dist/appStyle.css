@@ -1,0 +1,14 @@
+.star {
+  color:red;
+}
+/* styles in src/style directory are applied to the whole page */
+body {
+  background: #0147A7;
+  
+}
+
+a {
+  color: purple;
+}
+
+/*# sourceMappingURL=appStyle.css.map*/
