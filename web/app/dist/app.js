@@ -131,7 +131,7 @@ webpackJsonp([0],[
 	        _this.showModal = !_this.showModal;
 	    };
 	
-	    this.controllerName = 'Example Controller';
+	    this.controllerName = 'First Controller';
 	    this.showModal = false;
 	};
 	
@@ -184,7 +184,7 @@ webpackJsonp([0],[
 	
 	    console.log('$filter1' + $filter);
 	    this.url = 'https://github.com/preboot/angular-webpack';
-	    this.samplename = 'rudra';
+	    this.samplename = 'Directive Controller';
 	};
 	
 	/*
