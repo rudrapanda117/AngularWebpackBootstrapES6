@@ -1,5 +1,6 @@
 
 import modalTemplate from './modalDirective.html';
+import ModalDirectiveController from './modaldirectiveController.js'
 export default function() {
     return {
         template: modalTemplate,
@@ -33,10 +34,4 @@ export default function() {
             });
         }
     };
-}
-class ModalDirectiveController {
-    constructor() {
-        this.headLine = "Please fill in to login"
-    }
-
 }

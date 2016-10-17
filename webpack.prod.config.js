@@ -7,12 +7,12 @@ var CopyWebpackPlugin = require('copy-webpack-plugin');
 var extractAppCss = new ExtractTextPlugin('appStyle.css', {
     allChunks: false
 });
-var extractBootStrapCss = new ExtractTextPlugin('bootstrapStyle.css', {
+var extractBootStrapCss = new ExtractTextPlugin('vendorStyle.css', {
     allChunks: false
 });
 
 module.exports = {
-    devtool: 'source-map',
+    devtool: 'eval-source-map',
     entry: {
         app: path.join(__dirname, '/web/app/client/app.js')
     },
@@ -32,7 +32,7 @@ module.exports = {
         }, {
             test: /\.html$/,
             loader: 'html-loader'
-        },{
+        }, {
             test: /[\/\\]bootstrap[\/\\]*\.css$/,
             loader: /*"style!css"*/ extractBootStrapCss.extract('style-loader', 'css-loader')
 
@@ -56,6 +56,9 @@ module.exports = {
         }),
         extractAppCss,
         extractBootStrapCss,
+        new webpack.optimize.OccurenceOrderPlugin(),
+        new webpack.NoErrorsPlugin(),
+
         /*  new webpack.NoErrorsPlugin(),
           new webpack.optimize.DedupePlugin(),*/
         new CopyWebpackPlugin([{

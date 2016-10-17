@@ -1,0 +1,23 @@
+const webpack = require('webpack');
+const webpackDevServer =require('webpack-dev-server');
+const config = require('../webpack.dev.config.js');
+
+
+var webpackdevserver = new webpackDevServer(webpack(config),{
+  /* Avoid setting content base when proxy is set*/
+   /*contentBase: "../web/app/client",*/
+  publicPath:config.output.publicPath,
+  inline:true,
+  hot:true,
+  historyApiFallback:true,
+  proxy:{
+    "*":"http://localhost:3000"
+  }
+})
+
+webpackdevserver.listen(8080,'localhost',function(err,result){
+  if(err){
+    return console.log(err);
+  }
+  console.log("Listening at http://localhost:8080/");
+})

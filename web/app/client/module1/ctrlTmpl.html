@@ -1,6 +1,10 @@
 <div class="container">
     <div>
-        <div>{{ctrl.controllerName}}</div>
+        <h4>{{ctrl.controllerName}}</h4></div>
+    <div>
+        <button ng-click="ctrl.fetchData()" class="btn btn-default">Fetch Data</button>
+        <div>
+            <h4>Message is :{{ctrl.message}}</h4></div>
         <app></app>
         <h1>Modal example</h1>
         <button ng-click="ctrl.toggleModal()" class="btn btn-default">Open modal</button>

@@ -3,9 +3,11 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start:prod": "./node_modules/.bin/forever -m 5 ./bin/prodServer",
-    "build:prod": "rimraf web/app/dist && webpack --progress --profile --display-modules",
-    "start:dev": "./node_modules/nodemon/bin/nodemon.js ./bin/devServer"
+    "start:prod": "./node_modules/forever/bin/forever -m 5 ./bin/prodServer",
+    "build:prod": "rimraf web/app/dist && webpack --config ./webpack.prod.config.js --progress --profile --display-modules",
+     "devserver":  "./node_modules/nodemon/bin/nodemon.js ./bin/devServer",
+     "webpackhmr":"node ./bin/webpack",
+     "start:dev":"npm run devserver & npm run webpackhmr"
   },
   "dependencies": {
     "angular": "^1.5.8",
@@ -36,11 +38,14 @@
     "file-loader": "^0.9.0",
     "html-loader": "^0.4.4",
     "html-webpack-plugin": "^2.22.0",
+    "http-proxy": "^1.15.1",
     "node-sass": "^3.10.1",
     "rimraf": "^2.5.4",
     "sass-loader": "^4.0.2",
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",
-    "webpack": "^1.13.2"
+    "webpack": "^1.13.2",
+    "webpack-dev-middleware": "^1.8.4",
+    "webpack-hot-middleware": "^2.13.0"
   }
 }
