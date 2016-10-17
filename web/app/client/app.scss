@@ -1,9 +1,13 @@
 /* styles in src/style directory are applied to the whole page */
 body {
   background: #0147A7;
-  
+    padding-top: 50px;
 }
 
 a {
   color: purple;
+}
+.starter-template {
+  padding: 40px 15px;
+  text-align: center;
 }

@@ -66,6 +66,14 @@ module.exports = {
         }, {
             from: 'web/app/client/img/favicon.ico',
             to: './img/favicon.ico'
+        },
+        {
+            from: 'web/app/client/hometemplate.html',
+            to: 'hometemplate.html'
+        },
+        {
+            from: 'web/app/client/module2',
+            to: './module2'
         }]),
 
         // Automatically move all modules defined outside of application directory to vendor bundle.
