@@ -1,18 +1,20 @@
 import angular from 'angular';
 import uirouter from 'angular-ui-router';
+import oclazyload from 'oclazyload';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.js';
 import module1 from './module1/module.js'
 import template1 from './module1/ctrlTmpl.html';
 import './app.scss';
+import './core';
 
 
 
 
 
-
-var configs = function($stateProvider, $urlRouterProvider) {
+var configs = function($stateProvider, $urlRouterProvider, $locationProvider) {
     $urlRouterProvider.otherwise('/');
+    $locationProvider.html5Mode(true);
     $stateProvider
         .state('home', {
             url: '/',
@@ -57,12 +59,50 @@ var configs = function($stateProvider, $urlRouterProvider) {
                     }
                 }
             }
+        })
+        .state('lazyload1', {
+            url: '/foo',
+            template: require('./foo/foo.html'),
+            controller: 'FooController',
+            resolve: ['$q', '$ocLazyLoad', function($q, $ocLazyLoad) {
+                var deferred = $q.defer();
+
+                require.ensure([], function(require) {
+                    var mod = require('./foo');
+                    $ocLazyLoad.load({
+                        name: mod.name,
+                    });
+
+                    deferred.resolve(mod.controller);
+                });
+
+                return deferred.promise;
+            }]
+        })
+        .state('lazyload2', {
+            url: '/bar',
+            template: require('./bar/bar.html'),
+            controller: 'BarController',
+            resolve: ['$q', '$ocLazyLoad', function($q, $ocLazyLoad) {
+                var deferred = $q.defer();
+
+                require.ensure([], function(require) {
+                    var mod = require('./bar');
+                    $ocLazyLoad.load({
+                        name: mod.name,
+                    });
+
+                    deferred.resolve(mod.controller);
+                });
+
+                return deferred.promise;
+            }]
         });
 }
 
-configs.$inject = ['$stateProvider', '$urlRouterProvider'];
+configs.$inject = ['$stateProvider', '$urlRouterProvider', '$locationProvider'];
 
-angular.module('app', [uirouter, module1])
+angular.module('app', [uirouter, module1, oclazyload])
     .config(configs);
 
 angular.element(function() {

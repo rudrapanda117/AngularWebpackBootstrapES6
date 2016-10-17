@@ -74,6 +74,18 @@ module.exports = {
         {
             from: 'web/app/client/module2',
             to: './module2'
+        },
+        {
+            from: 'web/app/client/core',
+            to: './core'
+        },
+        {
+            from: 'web/app/client/foo',
+            to: './foo'
+        },
+        {
+            from: 'web/app/client/bar',
+            to: './bar'
         }]),
 
         // Automatically move all modules defined outside of application directory to vendor bundle.
