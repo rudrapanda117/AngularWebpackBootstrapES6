@@ -24,7 +24,21 @@ var configs = function($stateProvider, $urlRouterProvider, $locationProvider) {
             url: '/module1',
             template: template1,
             controller: 'AppCtrl',
-            controllerAs: 'ctrl'
+            controllerAs: 'ctrl',/*
+            resolve: ['$q', '$ocLazyLoad', function($q, $ocLazyLoad) {
+                var deferred = $q.defer();
+
+                require.ensure([], function(require) {
+                    var mod = require('./module1/module.js');
+                    $ocLazyLoad.load({
+                        name: mod.name,
+                    });
+
+                    deferred.resolve(mod.controller);
+                });
+
+                return deferred.promise;
+            }]*/
         }).state('nestedview', { //State demonstrating Nested views
             url: "/nestedview",
             templateUrl: "./module2/nestedview.html"
@@ -103,6 +117,7 @@ var configs = function($stateProvider, $urlRouterProvider, $locationProvider) {
 configs.$inject = ['$stateProvider', '$urlRouterProvider', '$locationProvider'];
 
 angular.module('app', [uirouter, module1, oclazyload])
+//angular.module('app', [uirouter, oclazyload])
     .config(configs);
 
 angular.element(function() {

@@ -4,10 +4,13 @@
   "private": true,
   "scripts": {
     "start:prod": "./node_modules/forever/bin/forever -m 5 ./bin/prodServer",
+    "start:prodL": "node ./bin/prodServer",
     "build:prod": "rimraf web/app/dist && webpack --config ./webpack.prod.config.js --progress --profile --display-modules",
     "devserver": "./node_modules/nodemon/bin/nodemon.js ./bin/devServer",
+    "devserverL": "nodemon ./bin/devServer",
     "webpackhmr": "node ./bin/webpack",
-    "start:dev": "npm run devserver & npm run webpackhmr"
+    "start:dev": "npm run devserver & npm run webpackhmr",
+    "start:devL": "npm run devserverL & npm run webpackhmr"
   },
   "dependencies": {
     "angular": "^1.5.8",
@@ -40,6 +43,7 @@
     "html-loader": "^0.4.4",
     "html-webpack-plugin": "^2.22.0",
     "http-proxy": "^1.15.1",
+    "ng-annotate-loader": "^0.2.0",
     "node-sass": "^3.10.1",
     "rimraf": "^2.5.4",
     "sass-loader": "^4.0.2",

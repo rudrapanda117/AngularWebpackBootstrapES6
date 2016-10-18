@@ -1,0 +1,31 @@
+webpackJsonp([2],{
+
+/***/ 8:
+/***/ function(module, exports, __webpack_require__) {
+
+	eval("exports = module.exports = __webpack_require__(2)();\n// imports\n\n\n// module\nexports.push([module.id, \"h1.bar {\\r\\n  color: blue;\\r\\n}\", \"\"]);\n\n// exports\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi93ZWIvYXBwL2NsaWVudC9iYXIvYmFyLnNjc3M/M2YzNyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtBQUNBOzs7QUFHQTtBQUNBLGtDQUFrQyxrQkFBa0IsS0FBSzs7QUFFekQiLCJmaWxlIjoiOC5qcyIsInNvdXJjZXNDb250ZW50IjpbImV4cG9ydHMgPSBtb2R1bGUuZXhwb3J0cyA9IHJlcXVpcmUoXCIuLy4uLy4uLy4uLy4uL25vZGVfbW9kdWxlcy9jc3MtbG9hZGVyL2xpYi9jc3MtYmFzZS5qc1wiKSgpO1xuLy8gaW1wb3J0c1xuXG5cbi8vIG1vZHVsZVxuZXhwb3J0cy5wdXNoKFttb2R1bGUuaWQsIFwiaDEuYmFyIHtcXHJcXG4gIGNvbG9yOiBibHVlO1xcclxcbn1cIiwgXCJcIl0pO1xuXG4vLyBleHBvcnRzXG5cblxuXG4vKioqKioqKioqKioqKioqKipcbiAqKiBXRUJQQUNLIEZPT1RFUlxuICoqIC4vfi9jc3MtbG9hZGVyIS4vd2ViL2FwcC9jbGllbnQvYmFyL2Jhci5zY3NzXG4gKiogbW9kdWxlIGlkID0gOFxuICoqIG1vZHVsZSBjaHVua3MgPSAyXG4gKiovIl0sInNvdXJjZVJvb3QiOiIifQ==");
+
+/***/ },
+
+/***/ 11:
+/***/ function(module, exports, __webpack_require__) {
+
+	eval("// style-loader: Adds some css to the DOM by adding a <style> tag\n\n// load the styles\nvar content = __webpack_require__(8);\nif(typeof content === 'string') content = [[module.id, content, '']];\n// add the styles to the DOM\nvar update = __webpack_require__(4)(content, {});\nif(content.locals) module.exports = content.locals;\n// Hot Module Replacement\nif(false) {\n\t// When the styles change, update the <style> tags\n\tif(!content.locals) {\n\t\tmodule.hot.accept(\"!!./../../../../node_modules/css-loader/index.js!./bar.scss\", function() {\n\t\t\tvar newContent = require(\"!!./../../../../node_modules/css-loader/index.js!./bar.scss\");\n\t\t\tif(typeof newContent === 'string') newContent = [[module.id, newContent, '']];\n\t\t\tupdate(newContent);\n\t\t});\n\t}\n\t// When the module is disposed, remove the <style> tags\n\tmodule.hot.dispose(function() { update(); });\n}//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi93ZWIvYXBwL2NsaWVudC9iYXIvYmFyLnNjc3M/NTczZiJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLCtDQUF5RjtBQUN6RjtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSxHQUFHO0FBQ0g7QUFDQTtBQUNBLGdDQUFnQyxVQUFVLEVBQUU7QUFDNUMiLCJmaWxlIjoiMTEuanMiLCJzb3VyY2VzQ29udGVudCI6WyIvLyBzdHlsZS1sb2FkZXI6IEFkZHMgc29tZSBjc3MgdG8gdGhlIERPTSBieSBhZGRpbmcgYSA8c3R5bGU+IHRhZ1xuXG4vLyBsb2FkIHRoZSBzdHlsZXNcbnZhciBjb250ZW50ID0gcmVxdWlyZShcIiEhLi8uLi8uLi8uLi8uLi9ub2RlX21vZHVsZXMvY3NzLWxvYWRlci9pbmRleC5qcyEuL2Jhci5zY3NzXCIpO1xuaWYodHlwZW9mIGNvbnRlbnQgPT09ICdzdHJpbmcnKSBjb250ZW50ID0gW1ttb2R1bGUuaWQsIGNvbnRlbnQsICcnXV07XG4vLyBhZGQgdGhlIHN0eWxlcyB0byB0aGUgRE9NXG52YXIgdXBkYXRlID0gcmVxdWlyZShcIiEuLy4uLy4uLy4uLy4uL25vZGVfbW9kdWxlcy9zdHlsZS1sb2FkZXIvYWRkU3R5bGVzLmpzXCIpKGNvbnRlbnQsIHt9KTtcbmlmKGNvbnRlbnQubG9jYWxzKSBtb2R1bGUuZXhwb3J0cyA9IGNvbnRlbnQubG9jYWxzO1xuLy8gSG90IE1vZHVsZSBSZXBsYWNlbWVudFxuaWYobW9kdWxlLmhvdCkge1xuXHQvLyBXaGVuIHRoZSBzdHlsZXMgY2hhbmdlLCB1cGRhdGUgdGhlIDxzdHlsZT4gdGFnc1xuXHRpZighY29udGVudC5sb2NhbHMpIHtcblx0XHRtb2R1bGUuaG90LmFjY2VwdChcIiEhLi8uLi8uLi8uLi8uLi9ub2RlX21vZHVsZXMvY3NzLWxvYWRlci9pbmRleC5qcyEuL2Jhci5zY3NzXCIsIGZ1bmN0aW9uKCkge1xuXHRcdFx0dmFyIG5ld0NvbnRlbnQgPSByZXF1aXJlKFwiISEuLy4uLy4uLy4uLy4uL25vZGVfbW9kdWxlcy9jc3MtbG9hZGVyL2luZGV4LmpzIS4vYmFyLnNjc3NcIik7XG5cdFx0XHRpZih0eXBlb2YgbmV3Q29udGVudCA9PT0gJ3N0cmluZycpIG5ld0NvbnRlbnQgPSBbW21vZHVsZS5pZCwgbmV3Q29udGVudCwgJyddXTtcblx0XHRcdHVwZGF0ZShuZXdDb250ZW50KTtcblx0XHR9KTtcblx0fVxuXHQvLyBXaGVuIHRoZSBtb2R1bGUgaXMgZGlzcG9zZWQsIHJlbW92ZSB0aGUgPHN0eWxlPiB0YWdzXG5cdG1vZHVsZS5ob3QuZGlzcG9zZShmdW5jdGlvbigpIHsgdXBkYXRlKCk7IH0pO1xufVxuXG5cbi8qKioqKioqKioqKioqKioqKlxuICoqIFdFQlBBQ0sgRk9PVEVSXG4gKiogLi93ZWIvYXBwL2NsaWVudC9iYXIvYmFyLnNjc3NcbiAqKiBtb2R1bGUgaWQgPSAxMVxuICoqIG1vZHVsZSBjaHVua3MgPSAyXG4gKiovIl0sInNvdXJjZVJvb3QiOiIifQ==");
+
+/***/ },
+
+/***/ 22:
+/***/ function(module, exports) {
+
+	eval("'use strict';\n\nmodule.exports = function ($scope) {\n  console.log('bar controller');\n};//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi93ZWIvYXBwL2NsaWVudC9iYXIvYmFyLmNvbnRyb2xsZXIuanM/MTQzNyJdLCJuYW1lcyI6WyJtb2R1bGUiLCJleHBvcnRzIiwiJHNjb3BlIiwiY29uc29sZSIsImxvZyJdLCJtYXBwaW5ncyI6Ijs7QUFBQUEsT0FBT0MsT0FBUCxHQUFpQixVQUFTQyxNQUFULEVBQWlCO0FBQ2hDQyxVQUFRQyxHQUFSLENBQVksZ0JBQVo7QUFDRCxDQUZEIiwiZmlsZSI6IjIyLmpzIiwic291cmNlc0NvbnRlbnQiOlsibW9kdWxlLmV4cG9ydHMgPSBmdW5jdGlvbigkc2NvcGUpIHtcclxuICBjb25zb2xlLmxvZygnYmFyIGNvbnRyb2xsZXInKTtcclxufVxuXG5cbi8qKiBXRUJQQUNLIEZPT1RFUiAqKlxuICoqIC4vd2ViL2FwcC9jbGllbnQvYmFyL2Jhci5jb250cm9sbGVyLmpzXG4gKiovIl0sInNvdXJjZVJvb3QiOiIifQ==");
+
+/***/ },
+
+/***/ 23:
+/***/ function(module, exports, __webpack_require__) {
+
+	eval("'use strict';\n\nvar barController = __webpack_require__(22);\n\n__webpack_require__(11);\n\nvar mod = module.exports = angular.module('bar', []);\n\nmod.controller('BarController', ['$scope', barController]);\n\nmodule.exports = mod;//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi93ZWIvYXBwL2NsaWVudC9iYXIvaW5kZXguanM/ZGNlYyJdLCJuYW1lcyI6WyJiYXJDb250cm9sbGVyIiwicmVxdWlyZSIsIm1vZCIsIm1vZHVsZSIsImV4cG9ydHMiLCJhbmd1bGFyIiwiY29udHJvbGxlciJdLCJtYXBwaW5ncyI6Ijs7QUFBQSxJQUFJQSxnQkFBZ0IsbUJBQUFDLENBQVEsRUFBUixDQUFwQjs7QUFFQSxtQkFBQUEsQ0FBUSxFQUFSOztBQUVBLElBQUlDLE1BQU1DLE9BQU9DLE9BQVAsR0FBaUJDLFFBQVFGLE1BQVIsQ0FBZSxLQUFmLEVBQXNCLEVBQXRCLENBQTNCOztBQUVBRCxJQUFJSSxVQUFKLENBQWUsZUFBZixFQUFnQyxDQUFDLFFBQUQsRUFBV04sYUFBWCxDQUFoQzs7QUFFQUcsT0FBT0MsT0FBUCxHQUFpQkYsR0FBakIiLCJmaWxlIjoiMjMuanMiLCJzb3VyY2VzQ29udGVudCI6WyJ2YXIgYmFyQ29udHJvbGxlciA9IHJlcXVpcmUoJy4vYmFyLmNvbnRyb2xsZXIuanMnKTtcclxuXHJcbnJlcXVpcmUoJy4vYmFyLnNjc3MnKTtcclxuXHJcbnZhciBtb2QgPSBtb2R1bGUuZXhwb3J0cyA9IGFuZ3VsYXIubW9kdWxlKCdiYXInLCBbXSk7XHJcblxyXG5tb2QuY29udHJvbGxlcignQmFyQ29udHJvbGxlcicsIFsnJHNjb3BlJywgYmFyQ29udHJvbGxlcl0pO1xyXG5cclxubW9kdWxlLmV4cG9ydHMgPSBtb2Q7XG5cblxuLyoqIFdFQlBBQ0sgRk9PVEVSICoqXG4gKiogLi93ZWIvYXBwL2NsaWVudC9iYXIvaW5kZXguanNcbiAqKi8iXSwic291cmNlUm9vdCI6IiJ9");
+
+/***/ }
+
+});
