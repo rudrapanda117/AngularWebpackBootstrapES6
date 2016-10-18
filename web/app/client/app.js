@@ -3,7 +3,7 @@ import uirouter from 'angular-ui-router';
 import oclazyload from 'oclazyload';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.js';
-import module1 from './module1/module.js'
+//import module1 from './module1/module.js'
 import template1 from './module1/ctrlTmpl.html';
 import './app.scss';
 import './core';
@@ -24,21 +24,22 @@ var configs = function($stateProvider, $urlRouterProvider, $locationProvider) {
             url: '/module1',
             template: template1,
             controller: 'AppCtrl',
-            controllerAs: 'ctrl',/*
+            controllerAs: 'ctrl',
             resolve: ['$q', '$ocLazyLoad', function($q, $ocLazyLoad) {
                 var deferred = $q.defer();
 
                 require.ensure([], function(require) {
                     var mod = require('./module1/module.js');
+                    console.log("Controller ",mod.default);
                     $ocLazyLoad.load({
-                        name: mod.name,
+                        name: mod.default.name,
                     });
 
-                    deferred.resolve(mod.controller);
+                    deferred.resolve(mod.default.controller);
                 });
 
                 return deferred.promise;
-            }]*/
+            }]
         }).state('nestedview', { //State demonstrating Nested views
             url: "/nestedview",
             templateUrl: "./module2/nestedview.html"
@@ -83,6 +84,7 @@ var configs = function($stateProvider, $urlRouterProvider, $locationProvider) {
 
                 require.ensure([], function(require) {
                     var mod = require('./foo');
+                    console.log("mod ",mod);
                     $ocLazyLoad.load({
                         name: mod.name,
                     });
@@ -116,8 +118,8 @@ var configs = function($stateProvider, $urlRouterProvider, $locationProvider) {
 
 configs.$inject = ['$stateProvider', '$urlRouterProvider', '$locationProvider'];
 
-angular.module('app', [uirouter, module1, oclazyload])
-//angular.module('app', [uirouter, oclazyload])
+//angular.module('app', [uirouter, module1, oclazyload])
+angular.module('app', [uirouter, oclazyload])
     .config(configs);
 
 angular.element(function() {

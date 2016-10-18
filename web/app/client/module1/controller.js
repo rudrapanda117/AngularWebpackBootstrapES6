@@ -17,4 +17,20 @@ export default class ExampleController {
     };
 }
 
-ExampleController.$inject=['$http'];
+/* export default function ExampleController($scope, $http) {
+    $scope.controllerName = 'First Controller';
+    $scope.showModal = false;
+    $scope.toggleModal = () => {
+        console.log("Clicked");
+        $scope.showModal = !$scope.showModal;
+    };
+    $scope.fetchData = () => {
+
+        $http.get("/users/")
+            .then((response) => {
+                $scope.message = response.data.message;
+            })
+    }
+}
+*/
+ExampleController.$inject = ['$http'];
