@@ -1,0 +1,107 @@
+<div>
+    <h1 class="star">Hello from Angular !</h1>
+    </br>
+    {{dire.samplename}}
+    </br>
+
+
+
+    <a ng-href="{{dire.url}}">Webpack Angular Starter</a>
+    <hr>
+    <!-- Images (and assets) are parsed and loaded from within the public directory -->
+
+    <div style="float: left;text-align:center;">
+        <table>
+            <tr>
+                <td> <img src="../img/png/Home-icon0.png"></td>
+                <td><img src="../img/png/Home-icon1.png"></td>
+                <td><img src="../img/png/Home-icon2.png"></td>
+                <td> <img src="../img/png/Home-icon3.png"></td>
+                <td><img src="../img/png/Home-icon4.png"></td>
+                <td><img src="../img/png/Home-icon5.png"></td>
+                <td> <img src="../img/png/Home-icon6.png"></td>
+                <td><img src="../img/png/Home-icon7.png"></td>
+                <td><img src="../img/png/Home-icon8.png"></td>
+                <td> <img src="../img/png/Home-icon9.png"></td>
+                <td><img src="../img/png/Home-icon10.png"></td>
+            </tr>
+            <tr>
+                <td><img src="../img/png/Home-icon10.png"></td>
+                <td><img src="../img/png/Home-icon11.png"></td>
+                <td><img src="../img/png/Home-icon12.png"></td>
+                <td><img src="../img/png/Home-icon13.png"></td>
+                <td><img src="../img/png/Home-icon14.png"></td>
+                <td><img src="../img/png/Home-icon15.png"></td>
+                <td><img src="../img/png/Home-icon16.png"></td>
+                <td><img src="../img/png/Home-icon17.png"></td>
+                <td><img src="../img/png/Home-icon18.png"></td>
+                <td><img src="../img/png/Home-icon19.png"></td>
+                <td><img src="../img/png/Home-icon20.png"></td>
+            </tr>
+            <tr>
+                <td><img src="../img/png/Home-icon20.png"></td>
+                <td><img src="../img/png/Home-icon21.png"></td>
+                <td><img src="../img/png/Home-icon22.png"></td>
+                <td><img src="../img/png/Home-icon23.png"></td>
+                <td><img src="../img/png/Home-icon24.png"></td>
+                <td><img src="../img/png/Home-icon25.png"></td>
+                <td><img src="../img/png/Home-icon26.png"></td>
+                <td><img src="../img/png/Home-icon27.png"></td>
+                <td><img src="../img/png/Home-icon28.png"></td>
+                <td><img src="../img/png/Home-icon29.png"></td>
+                <td><img src="../img/png/Home-icon30.png"></td>
+            </tr>
+
+        </table>
+        <h3>External image is downloaded.</h3>
+    </div>
+
+    <div style="float: left;text-align:center;">
+        <table>
+            <tr>
+                <td> <img src="../img/jpg/Home-icon0.jpg"></td>
+                <td> <img src="../img/jpg/Home-icon1.jpg"></td>
+                <td> <img src="../img/jpg/Home-icon2.jpg"></td>
+                <td> <img src="../img/jpg/Home-icon3.jpg"></td>
+                <td> <img src="../img/jpg/Home-icon4.jpg"></td>
+                <td> <img src="../img/jpg/Home-icon5.jpg"></td>
+                <td> <img src="../img/jpg/Home-icon6.jpg"></td>
+                <td> <img src="../img/jpg/Home-icon7.jpg"></td>
+                <td> <img src="../img/jpg/Home-icon8.jpg"></td>
+                <td> <img src="../img/jpg/Home-icon9.jpg"></td>
+                <td> <img src="../img/jpg/Home-icon10.jpg"></td>
+            </tr>
+            <tr>
+                <td> <img src="../img/jpg/Home-icon10.jpg"></td>
+                <td> <img src="../img/jpg/Home-icon11.jpg"></td>
+                <td> <img src="../img/jpg/Home-icon12.jpg"></td>
+                <td> <img src="../img/jpg/Home-icon13.jpg"></td>
+                <td> <img src="../img/jpg/Home-icon14.jpg"></td>
+                <td> <img src="../img/jpg/Home-icon15.jpg"></td>
+                <td> <img src="../img/jpg/Home-icon16.jpg"></td>
+                <td> <img src="../img/jpg/Home-icon17.jpg"></td>
+                <td> <img src="../img/jpg/Home-icon18.jpg"></td>
+                <td> <img src="../img/jpg/Home-icon19.jpg"></td>
+                <td> <img src="../img/jpg/Home-icon20.jpg"></td>
+            </tr>
+            <tr>
+                <td> <img src="../img/jpg/Home-icon20.jpg"></td>
+                <td> <img src="../img/jpg/Home-icon21.jpg"></td>
+                <td> <img src="../img/jpg/Home-icon22.jpg"></td>
+                <td> <img src="../img/jpg/Home-icon23.jpg"></td>
+                <td> <img src="../img/jpg/Home-icon24.jpg"></td>
+                <td> <img src="../img/jpg/Home-icon25.jpg"></td>
+                <td> <img src="../img/jpg/Home-icon26.jpg"></td>
+                <td> <img src="../img/jpg/Home-icon27.jpg"></td>
+                <td> <img src="../img/jpg/Home-icon28.jpg"></td>
+                <td> <img src="../img/jpg/Home-icon29.jpg"></td>
+                <td> <img src="../img/jpg/Home-icon30.jpg"></td>
+            </tr>
+
+        </table>
+        <h3>External image is downloaded.</h3>
+    </div>
+
+
+
+</div>
