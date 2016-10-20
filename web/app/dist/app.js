@@ -13,13 +13,13 @@ webpackJsonp([4,5],{
 	
 	var _angularUiRouter2 = _interopRequireDefault(_angularUiRouter);
 	
-	var _oclazyloads = __webpack_require__(9);
-	
-	var _oclazyloads2 = _interopRequireDefault(_oclazyloads);
-	
 	__webpack_require__(21);
 	
 	__webpack_require__(6);
+	
+	var _oclazyloads = __webpack_require__(9);
+	
+	var _oclazyloads2 = _interopRequireDefault(_oclazyloads);
 	
 	var _ctrlTmpl = __webpack_require__(53);
 	
@@ -54,7 +54,7 @@ webpackJsonp([4,5],{
 	                });
 	
 	                deferred.resolve(mod.default.controller);
-	            }); //naming chunkfiles 
+	            }); //naming chunkfiles
 	
 	            return deferred.promise;
 	        }]
@@ -128,6 +128,7 @@ webpackJsonp([4,5],{
 	        }]
 	    });
 	};
+	
 	//import module1 from './module1/module.js'
 	
 	
@@ -468,21 +469,21 @@ webpackJsonp([4,5],{
 /***/ 51:
 /***/ function(module, exports) {
 
-	module.exports = "<nav class=\"navbar navbar-inverse navbar-fixed-top\">\r\n      <div class=\"container\">\r\n        <div class=\"navbar-header\">\r\n          <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#navbar\" aria-expanded=\"false\" aria-controls=\"navbar\">\r\n            <span class=\"sr-only\">Toggle navigation</span>\r\n            <span class=\"icon-bar\"></span>\r\n            <span class=\"icon-bar\"></span>\r\n            <span class=\"icon-bar\"></span>\r\n          </button>\r\n          <a class=\"navbar-brand\" href=\"#\">Angular Webpack ES6 Bootstrap</a>\r\n        </div>\r\n        <div id=\"navbar\" class=\"collapse navbar-collapse\">\r\n          <ul class=\"nav navbar-nav\">\r\n            <li class=\"active\"><a ui-sref=\"home\">Home</a></li>\r\n            <li><a ui-sref=\"next\">ES6 Angular Example</a></li>\r\n            <li><a ui-sref=\"nestedview\">UI Router Nested View Example</a></li>\r\n            <li><a ui-sref=\"namedview\">UI Router Named View Example</a></li>\r\n            <li><a ui-sref=\"lazyload1\">With OclazyLoading</a></li>\r\n          </ul>\r\n        </div><!--/.nav-collapse -->\r\n      </div>\r\n    </nav>\r\n\r\n<h1 class='bar'>lazyload2 state</h1>\r\n\r\n<a ui-sref='lazyload1'>Go to lazyload1 state</a>\r\n";
+	module.exports = "<nav class=\"navbar navbar-inverse navbar-fixed-top\">\n      <div class=\"container\">\n        <div class=\"navbar-header\">\n          <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#navbar\" aria-expanded=\"false\" aria-controls=\"navbar\">\n            <span class=\"sr-only\">Toggle navigation</span>\n            <span class=\"icon-bar\"></span>\n            <span class=\"icon-bar\"></span>\n            <span class=\"icon-bar\"></span>\n          </button>\n          <a class=\"navbar-brand\" href=\"#\">Angular Webpack ES6 Bootstrap</a>\n        </div>\n        <div id=\"navbar\" class=\"collapse navbar-collapse\">\n          <ul class=\"nav navbar-nav\">\n            <li class=\"active\"><a ui-sref=\"home\">Home</a></li>\n            <li><a ui-sref=\"next\">ES6 Angular Example</a></li>\n            <li><a ui-sref=\"nestedview\">UI Router Nested View Example</a></li>\n            <li><a ui-sref=\"namedview\">UI Router Named View Example</a></li>\n            <li><a ui-sref=\"lazyload1\">With OclazyLoading</a></li>\n          </ul>\n        </div><!--/.nav-collapse -->\n      </div>\n    </nav>\n\n<h1 class='bar'>lazyload2 state</h1>\n\n<a ui-sref='lazyload1'>Go to lazyload1 state</a>\n";
 
 /***/ },
 
 /***/ 52:
 /***/ function(module, exports) {
 
-	module.exports = "<nav class=\"navbar navbar-inverse navbar-fixed-top\">\r\n      <div class=\"container\">\r\n        <div class=\"navbar-header\">\r\n          <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#navbar\" aria-expanded=\"false\" aria-controls=\"navbar\">\r\n            <span class=\"sr-only\">Toggle navigation</span>\r\n            <span class=\"icon-bar\"></span>\r\n            <span class=\"icon-bar\"></span>\r\n            <span class=\"icon-bar\"></span>\r\n          </button>\r\n          <a class=\"navbar-brand\" href=\"#\">Angular Webpack ES6 Bootstrap</a>\r\n        </div>\r\n        <div id=\"navbar\" class=\"collapse navbar-collapse\">\r\n          <ul class=\"nav navbar-nav\">\r\n            <li class=\"active\"><a ui-sref=\"home\">Home</a></li>\r\n            <li><a ui-sref=\"next\">ES6 Angular Example</a></li>\r\n            <li><a ui-sref=\"nestedview\">UI Router Nested View Example</a></li>\r\n            <li><a ui-sref=\"namedview\">UI Router Named View Example</a></li>\r\n            <li><a ui-sref=\"lazyload1\">With OclazyLoading</a></li>\r\n          </ul>\r\n        </div><!--/.nav-collapse -->\r\n      </div>\r\n    </nav>\r\n\r\n<h1 class='foo'>Lazyload1 state</h1>\r\n\r\n\r\n<a ui-sref='lazyload2'>Go to Lazyload2 state</a>\r\n";
+	module.exports = "<nav class=\"navbar navbar-inverse navbar-fixed-top\">\n      <div class=\"container\">\n        <div class=\"navbar-header\">\n          <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#navbar\" aria-expanded=\"false\" aria-controls=\"navbar\">\n            <span class=\"sr-only\">Toggle navigation</span>\n            <span class=\"icon-bar\"></span>\n            <span class=\"icon-bar\"></span>\n            <span class=\"icon-bar\"></span>\n          </button>\n          <a class=\"navbar-brand\" href=\"#\">Angular Webpack ES6 Bootstrap</a>\n        </div>\n        <div id=\"navbar\" class=\"collapse navbar-collapse\">\n          <ul class=\"nav navbar-nav\">\n            <li class=\"active\"><a ui-sref=\"home\">Home</a></li>\n            <li><a ui-sref=\"next\">ES6 Angular Example</a></li>\n            <li><a ui-sref=\"nestedview\">UI Router Nested View Example</a></li>\n            <li><a ui-sref=\"namedview\">UI Router Named View Example</a></li>\n            <li><a ui-sref=\"lazyload1\">With OclazyLoading</a></li>\n          </ul>\n        </div><!--/.nav-collapse -->\n      </div>\n    </nav>\n\n<h1 class='foo'>Lazyload1 state</h1>\n\n\n<a ui-sref='lazyload2'>Go to Lazyload2 state</a>\n";
 
 /***/ },
 
 /***/ 53:
 /***/ function(module, exports) {
 
-	module.exports = "<nav class=\"navbar navbar-inverse navbar-fixed-top\">\r\n      <div class=\"container\">\r\n        <div class=\"navbar-header\">\r\n          <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#navbar\" aria-expanded=\"false\" aria-controls=\"navbar\">\r\n            <span class=\"sr-only\">Toggle navigation</span>\r\n            <span class=\"icon-bar\"></span>\r\n            <span class=\"icon-bar\"></span>\r\n            <span class=\"icon-bar\"></span>\r\n          </button>\r\n          <a class=\"navbar-brand\" href=\"#\">Angular Webpack ES6 Bootstrap</a>\r\n        </div>\r\n        <div id=\"navbar\" class=\"collapse navbar-collapse\">\r\n          <ul class=\"nav navbar-nav\">\r\n            <li class=\"active\"><a ui-sref=\"home\">Home</a></li>\r\n            <li><a ui-sref=\"next\">ES6 Angular Example</a></li>\r\n            <li><a ui-sref=\"nestedview\">UI Router Nested View Example</a></li>\r\n            <li><a ui-sref=\"namedview\">UI Router Named View Example</a></li>\r\n            <li><a ui-sref=\"lazyload1\">With OclazyLoading</a></li>\r\n          </ul>\r\n        </div><!--/.nav-collapse -->\r\n      </div>\r\n    </nav>\r\n\r\n\r\n<div class=\"container\">\r\n    <div>\r\n        <h4>{{ctrl.controllerName}}</h4></div>\r\n    <div>\r\n        <button ng-click=\"ctrl.fetchData()\" class=\"btn btn-default\">Fetch Data</button>\r\n        <div>\r\n            <h4>Message is :{{ctrl.message}}</h4></div>\r\n        <app></app>\r\n        <h1>Modal example</h1>\r\n        <button ng-click=\"ctrl.toggleModal()\" class=\"btn btn-default\">Open modal</button>\r\n\r\n        <modal title=\"Login form\" visible=\"ctrl.showModal\">\r\n            <form role=\"form\">\r\n                <div class=\"form-group\">\r\n                    <label for=\"email\">Email address</label>\r\n                    <input type=\"email\" class=\"form-control\" id=\"email\" placeholder=\"Enter email\" />\r\n                </div>\r\n                <div class=\"form-group\">\r\n                    <label for=\"password\">Password</label>\r\n                    <input type=\"password\" class=\"form-control\" id=\"password\" placeholder=\"Password\" />\r\n                </div>\r\n                <button type=\"submit\" class=\"btn btn-default\">Submit</button>\r\n            </form>\r\n        </modal>\r\n    </div>\r\n</div>\r\n";
+	module.exports = "<nav class=\"navbar navbar-inverse navbar-fixed-top\">\n      <div class=\"container\">\n        <div class=\"navbar-header\">\n          <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#navbar\" aria-expanded=\"false\" aria-controls=\"navbar\">\n            <span class=\"sr-only\">Toggle navigation</span>\n            <span class=\"icon-bar\"></span>\n            <span class=\"icon-bar\"></span>\n            <span class=\"icon-bar\"></span>\n          </button>\n          <a class=\"navbar-brand\" href=\"#\">Angular Webpack ES6 Bootstrap</a>\n        </div>\n        <div id=\"navbar\" class=\"collapse navbar-collapse\">\n          <ul class=\"nav navbar-nav\">\n            <li class=\"active\"><a ui-sref=\"home\">Home</a></li>\n            <li><a ui-sref=\"next\">ES6 Angular Example</a></li>\n            <li><a ui-sref=\"nestedview\">UI Router Nested View Example</a></li>\n            <li><a ui-sref=\"namedview\">UI Router Named View Example</a></li>\n            <li><a ui-sref=\"lazyload1\">With OclazyLoading</a></li>\n          </ul>\n        </div><!--/.nav-collapse -->\n      </div>\n    </nav>\n\n\n<div class=\"container\">\n    <div>\n        <h4>{{ctrl.controllerName}}</h4></div>\n    <div>\n        <button ng-click=\"ctrl.fetchData()\" class=\"btn btn-default\">Fetch Data</button>\n        <div>\n            <h4>Message is :{{ctrl.message}}</h4></div>\n        <app></app>\n        <h1>Modal example</h1>\n        <button ng-click=\"ctrl.toggleModal()\" class=\"btn btn-default\">Open modal</button>\n\n        <modal title=\"Login form\" visible=\"ctrl.showModal\">\n            <form role=\"form\">\n                <div class=\"form-group\">\n                    <label for=\"email\">Email address</label>\n                    <input type=\"email\" class=\"form-control\" id=\"email\" placeholder=\"Enter email\" />\n                </div>\n                <div class=\"form-group\">\n                    <label for=\"password\">Password</label>\n                    <input type=\"password\" class=\"form-control\" id=\"password\" placeholder=\"Password\" />\n                </div>\n                <button type=\"submit\" class=\"btn btn-default\">Submit</button>\n            </form>\n        </modal>\n    </div>\n</div>\n";
 
 /***/ },
 

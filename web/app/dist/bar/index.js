@@ -4,6 +4,6 @@ require('./bar.scss');
 
 var mod = module.exports = angular.module('bar', []);
 
-mod.controller('BarController', ['$scope', barController]);
+mod.controller('BarController', barController);
 
 module.exports = mod;

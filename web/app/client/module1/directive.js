@@ -1,8 +1,23 @@
 
 import './directive.scss'
+
+
+/*ExampleDirective.$inject = ['$filter'];*/
+
+class ExampleDirectiveController {
+    constructor($filter) {
+      'ngInject';
+      console.log('$filter1'+$filter);
+        this.url = 'https://github.com/preboot/angular-webpack';
+        this.samplename = 'Directive Controller';
+    }
+
+}
+
 export default class ExampleDirective {
 
     constructor($filter) {
+      'ngInject';
         console.log("filter", $filter);
         this.template = require('./directive.html');
         this.restrict = 'E';
@@ -15,16 +30,7 @@ export default class ExampleDirective {
 
 
 }
-//ExampleDirective.$inject = ['$filter'];
 
-class ExampleDirectiveController {
-    constructor($filter) {
-      console.log('$filter1'+$filter);
-        this.url = 'https://github.com/preboot/angular-webpack';
-        this.samplename = 'Directive Controller';
-    }
-
-}
 
 /*
 function ExampleDirectiveController($filter) {
@@ -34,7 +40,7 @@ console.log('$filter'+$filter);
 
 };
 */
-ExampleDirectiveController.$inject = ['$filter'];
+//ExampleDirectiveController.$inject = ['$filter'];
 
 
 

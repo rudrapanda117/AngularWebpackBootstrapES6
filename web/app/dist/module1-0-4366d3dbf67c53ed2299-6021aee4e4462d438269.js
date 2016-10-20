@@ -38,7 +38,7 @@ webpackJsonp([0,5],[
 	
 	
 	// module
-	exports.push([module.id, ".star {\r\n  color:red;\r\n}\r\n", ""]);
+	exports.push([module.id, ".star {\n  color:red;\n}\n", ""]);
 	
 	// exports
 
@@ -255,13 +255,13 @@ webpackJsonp([0,5],[
 /* 54 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = "<div>\r\n    <h1 class=\"star\">Hello from Angular !</h1>\r\n    </br>\r\n    {{dire.samplename}}\r\n    </br>\r\n\r\n\r\n\r\n    <a ng-href=\"{{dire.url}}\">Webpack Angular Starter</a>\r\n    <hr>\r\n    <!-- Images (and assets) are parsed and loaded from within the public directory -->\r\n\r\n    <div style=\"float: left;text-align:center;\">\r\n        <table>\r\n            <tr>\r\n                <td> <img src=\"" + __webpack_require__(22) + "\"></td>\r\n                <td><img src=\"" + __webpack_require__(23) + "\"></td>\r\n                <td><img src=\"" + __webpack_require__(33) + "\"></td>\r\n                <td> <img src=\"" + __webpack_require__(43) + "\"></td>\r\n                <td><img src=\"" + __webpack_require__(45) + "\"></td>\r\n                <td><img src=\"" + __webpack_require__(46) + "\"></td>\r\n                <td> <img src=\"" + __webpack_require__(47) + "\"></td>\r\n                <td><img src=\"" + __webpack_require__(48) + "\"></td>\r\n                <td><img src=\"" + __webpack_require__(49) + "\"></td>\r\n                <td> <img src=\"" + __webpack_require__(50) + "\"></td>\r\n                <td><img src=\"" + __webpack_require__(7) + "\"></td>\r\n            </tr>\r\n            <tr>\r\n                <td><img src=\"" + __webpack_require__(7) + "\"></td>\r\n                <td><img src=\"" + __webpack_require__(24) + "\"></td>\r\n                <td><img src=\"" + __webpack_require__(25) + "\"></td>\r\n                <td><img src=\"" + __webpack_require__(26) + "\"></td>\r\n                <td><img src=\"" + __webpack_require__(27) + "\"></td>\r\n                <td><img src=\"" + __webpack_require__(28) + "\"></td>\r\n                <td><img src=\"" + __webpack_require__(29) + "\"></td>\r\n                <td><img src=\"" + __webpack_require__(30) + "\"></td>\r\n                <td><img src=\"" + __webpack_require__(31) + "\"></td>\r\n                <td><img src=\"" + __webpack_require__(32) + "\"></td>\r\n                <td><img src=\"" + __webpack_require__(8) + "\"></td>\r\n            </tr>\r\n            <tr>\r\n                <td><img src=\"" + __webpack_require__(8) + "\"></td>\r\n                <td><img src=\"" + __webpack_require__(34) + "\"></td>\r\n                <td><img src=\"" + __webpack_require__(35) + "\"></td>\r\n                <td><img src=\"" + __webpack_require__(36) + "\"></td>\r\n                <td><img src=\"" + __webpack_require__(37) + "\"></td>\r\n                <td><img src=\"" + __webpack_require__(38) + "\"></td>\r\n                <td><img src=\"" + __webpack_require__(39) + "\"></td>\r\n                <td><img src=\"" + __webpack_require__(40) + "\"></td>\r\n                <td><img src=\"" + __webpack_require__(41) + "\"></td>\r\n                <td><img src=\"" + __webpack_require__(42) + "\"></td>\r\n                <td><img src=\"" + __webpack_require__(44) + "\"></td>\r\n            </tr>\r\n\r\n        </table>\r\n        <h3>External image is downloaded.</h3>\r\n    </div>\r\n\r\n    <div style=\"float: left;text-align:center;\">\r\n        <table>\r\n            <tr>\r\n                <td> <img src=\"" + __webpack_require__(66) + "\"></td>\r\n                <td> <img src=\"" + __webpack_require__(67) + "\"></td>\r\n                <td> <img src=\"" + __webpack_require__(77) + "\"></td>\r\n                <td> <img src=\"" + __webpack_require__(87) + "\"></td>\r\n                <td> <img src=\"" + __webpack_require__(89) + "\"></td>\r\n                <td> <img src=\"" + __webpack_require__(90) + "\"></td>\r\n                <td> <img src=\"" + __webpack_require__(91) + "\"></td>\r\n                <td> <img src=\"" + __webpack_require__(92) + "\"></td>\r\n                <td> <img src=\"" + __webpack_require__(93) + "\"></td>\r\n                <td> <img src=\"" + __webpack_require__(94) + "\"></td>\r\n                <td> <img src=\"" + __webpack_require__(10) + "\"></td>\r\n            </tr>\r\n            <tr>\r\n                <td> <img src=\"" + __webpack_require__(10) + "\"></td>\r\n                <td> <img src=\"" + __webpack_require__(68) + "\"></td>\r\n                <td> <img src=\"" + __webpack_require__(69) + "\"></td>\r\n                <td> <img src=\"" + __webpack_require__(70) + "\"></td>\r\n                <td> <img src=\"" + __webpack_require__(71) + "\"></td>\r\n                <td> <img src=\"" + __webpack_require__(72) + "\"></td>\r\n                <td> <img src=\"" + __webpack_require__(73) + "\"></td>\r\n                <td> <img src=\"" + __webpack_require__(74) + "\"></td>\r\n                <td> <img src=\"" + __webpack_require__(75) + "\"></td>\r\n                <td> <img src=\"" + __webpack_require__(76) + "\"></td>\r\n                <td> <img src=\"" + __webpack_require__(11) + "\"></td>\r\n            </tr>\r\n            <tr>\r\n                <td> <img src=\"" + __webpack_require__(11) + "\"></td>\r\n                <td> <img src=\"" + __webpack_require__(78) + "\"></td>\r\n                <td> <img src=\"" + __webpack_require__(79) + "\"></td>\r\n                <td> <img src=\"" + __webpack_require__(80) + "\"></td>\r\n                <td> <img src=\"" + __webpack_require__(81) + "\"></td>\r\n                <td> <img src=\"" + __webpack_require__(82) + "\"></td>\r\n                <td> <img src=\"" + __webpack_require__(83) + "\"></td>\r\n                <td> <img src=\"" + __webpack_require__(84) + "\"></td>\r\n                <td> <img src=\"" + __webpack_require__(85) + "\"></td>\r\n                <td> <img src=\"" + __webpack_require__(86) + "\"></td>\r\n                <td> <img src=\"" + __webpack_require__(88) + "\"></td>\r\n            </tr>\r\n\r\n        </table>\r\n        <h3>Internal image is inlined.</h3>\r\n    </div>\r\n\r\n\r\n\r\n</div>\r\n";
+	module.exports = "<div>\n    <h1 class=\"star\">Hello from Angular !</h1>\n    </br>\n    {{dire.samplename}}\n    </br>\n\n\n\n    <a ng-href=\"{{dire.url}}\">Webpack Angular Starter</a>\n    <hr>\n    <!-- Images (and assets) are parsed and loaded from within the public directory -->\n\n    <div style=\"float: left;text-align:center;\">\n        <table>\n            <tr>\n                <td> <img src=\"" + __webpack_require__(22) + "\"></td>\n                <td><img src=\"" + __webpack_require__(23) + "\"></td>\n                <td><img src=\"" + __webpack_require__(33) + "\"></td>\n                <td> <img src=\"" + __webpack_require__(43) + "\"></td>\n                <td><img src=\"" + __webpack_require__(45) + "\"></td>\n                <td><img src=\"" + __webpack_require__(46) + "\"></td>\n                <td> <img src=\"" + __webpack_require__(47) + "\"></td>\n                <td><img src=\"" + __webpack_require__(48) + "\"></td>\n                <td><img src=\"" + __webpack_require__(49) + "\"></td>\n                <td> <img src=\"" + __webpack_require__(50) + "\"></td>\n                <td><img src=\"" + __webpack_require__(7) + "\"></td>\n            </tr>\n            <tr>\n                <td><img src=\"" + __webpack_require__(7) + "\"></td>\n                <td><img src=\"" + __webpack_require__(24) + "\"></td>\n                <td><img src=\"" + __webpack_require__(25) + "\"></td>\n                <td><img src=\"" + __webpack_require__(26) + "\"></td>\n                <td><img src=\"" + __webpack_require__(27) + "\"></td>\n                <td><img src=\"" + __webpack_require__(28) + "\"></td>\n                <td><img src=\"" + __webpack_require__(29) + "\"></td>\n                <td><img src=\"" + __webpack_require__(30) + "\"></td>\n                <td><img src=\"" + __webpack_require__(31) + "\"></td>\n                <td><img src=\"" + __webpack_require__(32) + "\"></td>\n                <td><img src=\"" + __webpack_require__(8) + "\"></td>\n            </tr>\n            <tr>\n                <td><img src=\"" + __webpack_require__(8) + "\"></td>\n                <td><img src=\"" + __webpack_require__(34) + "\"></td>\n                <td><img src=\"" + __webpack_require__(35) + "\"></td>\n                <td><img src=\"" + __webpack_require__(36) + "\"></td>\n                <td><img src=\"" + __webpack_require__(37) + "\"></td>\n                <td><img src=\"" + __webpack_require__(38) + "\"></td>\n                <td><img src=\"" + __webpack_require__(39) + "\"></td>\n                <td><img src=\"" + __webpack_require__(40) + "\"></td>\n                <td><img src=\"" + __webpack_require__(41) + "\"></td>\n                <td><img src=\"" + __webpack_require__(42) + "\"></td>\n                <td><img src=\"" + __webpack_require__(44) + "\"></td>\n            </tr>\n\n        </table>\n        <h3>External image is downloaded.</h3>\n    </div>\n\n    <div style=\"float: left;text-align:center;\">\n        <table>\n            <tr>\n                <td> <img src=\"" + __webpack_require__(66) + "\"></td>\n                <td> <img src=\"" + __webpack_require__(67) + "\"></td>\n                <td> <img src=\"" + __webpack_require__(77) + "\"></td>\n                <td> <img src=\"" + __webpack_require__(87) + "\"></td>\n                <td> <img src=\"" + __webpack_require__(89) + "\"></td>\n                <td> <img src=\"" + __webpack_require__(90) + "\"></td>\n                <td> <img src=\"" + __webpack_require__(91) + "\"></td>\n                <td> <img src=\"" + __webpack_require__(92) + "\"></td>\n                <td> <img src=\"" + __webpack_require__(93) + "\"></td>\n                <td> <img src=\"" + __webpack_require__(94) + "\"></td>\n                <td> <img src=\"" + __webpack_require__(10) + "\"></td>\n            </tr>\n            <tr>\n                <td> <img src=\"" + __webpack_require__(10) + "\"></td>\n                <td> <img src=\"" + __webpack_require__(68) + "\"></td>\n                <td> <img src=\"" + __webpack_require__(69) + "\"></td>\n                <td> <img src=\"" + __webpack_require__(70) + "\"></td>\n                <td> <img src=\"" + __webpack_require__(71) + "\"></td>\n                <td> <img src=\"" + __webpack_require__(72) + "\"></td>\n                <td> <img src=\"" + __webpack_require__(73) + "\"></td>\n                <td> <img src=\"" + __webpack_require__(74) + "\"></td>\n                <td> <img src=\"" + __webpack_require__(75) + "\"></td>\n                <td> <img src=\"" + __webpack_require__(76) + "\"></td>\n                <td> <img src=\"" + __webpack_require__(11) + "\"></td>\n            </tr>\n            <tr>\n                <td> <img src=\"" + __webpack_require__(11) + "\"></td>\n                <td> <img src=\"" + __webpack_require__(78) + "\"></td>\n                <td> <img src=\"" + __webpack_require__(79) + "\"></td>\n                <td> <img src=\"" + __webpack_require__(80) + "\"></td>\n                <td> <img src=\"" + __webpack_require__(81) + "\"></td>\n                <td> <img src=\"" + __webpack_require__(82) + "\"></td>\n                <td> <img src=\"" + __webpack_require__(83) + "\"></td>\n                <td> <img src=\"" + __webpack_require__(84) + "\"></td>\n                <td> <img src=\"" + __webpack_require__(85) + "\"></td>\n                <td> <img src=\"" + __webpack_require__(86) + "\"></td>\n                <td> <img src=\"" + __webpack_require__(88) + "\"></td>\n            </tr>\n\n        </table>\n        <h3>Internal image is inlined.</h3>\n    </div>\n\n\n\n</div>\n";
 
 /***/ },
 /* 55 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"modal fade\">\r\n    <div class=\"modal-dialog\">\r\n      <div class=\"modal-content\">\r\n        <div class=\"modal-header\">\r\n          <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-hidden=\"true\">&times;</button>\r\n          <h4 class=\"modal-title\">{{ title }}</h4>\r\n          <h4 class=\"modal-title\">{{ mod.headLine }}</h4>\r\n        </div>\r\n        <div class=\"modal-body\" ng-transclude></div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n";
+	module.exports = "<div class=\"modal fade\">\n    <div class=\"modal-dialog\">\n      <div class=\"modal-content\">\n        <div class=\"modal-header\">\n          <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-hidden=\"true\">&times;</button>\n          <h4 class=\"modal-title\">{{ title }}</h4>\n          <h4 class=\"modal-title\">{{ mod.headLine }}</h4>\n        </div>\n        <div class=\"modal-body\" ng-transclude></div>\n      </div>\n    </div>\n  </div>\n";
 
 /***/ },
 /* 56 */,
@@ -337,7 +337,22 @@ webpackJsonp([0,5],[
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 	
+	/*ExampleDirective.$inject = ['$filter'];*/
+	
+	var ExampleDirectiveController = function ExampleDirectiveController($filter) {
+	    'ngInject';
+	
+	    _classCallCheck(this, ExampleDirectiveController);
+	
+	    console.log('$filter1' + $filter);
+	    this.url = 'https://github.com/preboot/angular-webpack';
+	    this.samplename = 'Directive Controller';
+	};
+	ExampleDirectiveController.$inject = ["$filter"];
+	
 	var ExampleDirective = function ExampleDirective($filter) {
+	    'ngInject';
+	
 	    _classCallCheck(this, ExampleDirective);
 	
 	    console.log("filter", $filter);
@@ -349,17 +364,7 @@ webpackJsonp([0,5],[
 	    this.controllerAs = 'dire';
 	    this.bindToController = true;
 	};
-	//ExampleDirective.$inject = ['$filter'];
-	
-	exports.default = ExampleDirective;
-	
-	var ExampleDirectiveController = function ExampleDirectiveController($filter) {
-	    _classCallCheck(this, ExampleDirectiveController);
-	
-	    console.log('$filter1' + $filter);
-	    this.url = 'https://github.com/preboot/angular-webpack';
-	    this.samplename = 'Directive Controller';
-	};
+	ExampleDirective.$inject = ["$filter"];
 	
 	/*
 	function ExampleDirectiveController($filter) {
@@ -369,9 +374,8 @@ webpackJsonp([0,5],[
 	
 	};
 	*/
+	//ExampleDirectiveController.$inject = ['$filter'];
 	
-	
-	ExampleDirectiveController.$inject = ['$filter'];
 	
 	/*
 	class ExampleDirectiveController {
@@ -405,14 +409,14 @@ webpackJsonp([0,5],[
 	        }
 	        return arr;
 	    }
-
+	
 	    searchMatch = (haystack, needle) => {
 	        if (!needle) {
 	            return true;
 	        }
 	        return haystack.toLowerCase().indexOf(needle.toLowerCase()) !== -1;
 	    };
-
+	
 	    // init the filtered items
 	    search = () => {
 	        this.filteredItems = $filter('filter')(this.items, function(item) {
@@ -430,16 +434,16 @@ webpackJsonp([0,5],[
 	        // now group by pages
 	        this.groupToPages();
 	    };
-
+	
 	    // show items per page
 	    perPage = () => {
 	        this.groupToPages();
 	    };
-
+	
 	    // calculate page in place
 	    groupToPages = () => {
 	        this.pagedItems = [];
-
+	
 	        for (var i = 0; i < this.filteredItems.length; i++) {
 	            if (i % this.itemsPerPage === 0) {
 	                this.pagedItems[Math.floor(i / this.itemsPerPage)] = [this.filteredItems[i]];
@@ -448,16 +452,16 @@ webpackJsonp([0,5],[
 	            }
 	        }
 	    };
-
+	
 	    deleteItem = (idx) => {
 	        var itemToDelete = this.pagedItems[this.currentPage][idx];
 	        var idxInItems = this.items.indexOf(itemToDelete);
 	        this.items.splice(idxInItems, 1);
 	        this.search();
-
+	
 	        return false;
 	    };
-
+	
 	    range = (start, end) => {
 	        var ret = [];
 	        if (!end) {
@@ -469,39 +473,42 @@ webpackJsonp([0,5],[
 	        }
 	        return ret;
 	    };
-
+	
 	    prevPage = () => {
 	        if (this.currentPage > 0) {
 	            this.currentPage--;
 	        }
 	    };
-
+	
 	    nextPage = () => {
 	        if (this.currentPage < this.pagedItems.length - 1) {
 	            this.currentPage++;
 	        }
 	    };
-
+	
 	    setPage = () => {
 	        this.currentPage = this.n;
 	    };
-
+	
 	    // functions have been describe process the data for display
-
-
-
+	
+	
+	
 	    // change sorting order
 	    sort_by = (newSortingOrder) => {
 	        if (this.sortingOrder == newSortingOrder)
 	            this.reverse = !this.reverse;
-
+	
 	        this.sortingOrder = newSortingOrder;
 	    };
-
+	
 	};
-
+	
 	ExampleDirectiveController.$inject = ['$filter'];
 	*/
+	
+	
+	exports.default = ExampleDirective;
 
 /***/ },
 /* 63 */
@@ -672,4 +679,4 @@ webpackJsonp([0,5],[
 /* 94 */
 10
 ]);
-//# sourceMappingURL=module1-0-fa4d3232fbd0b92a9ed4-f0763ab1ebdc89936172.js.map
+//# sourceMappingURL=module1-0-4366d3dbf67c53ed2299-6021aee4e4462d438269.js.map

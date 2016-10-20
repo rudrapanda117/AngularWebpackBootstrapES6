@@ -8,7 +8,7 @@ webpackJsonp([3,5],{
 	
 	
 	// module
-	exports.push([module.id, "h1.bar {\r\n  color: blue;\r\n}", ""]);
+	exports.push([module.id, "h1.bar {\n  color: blue;\n}", ""]);
 	
 	// exports
 
@@ -45,11 +45,13 @@ webpackJsonp([3,5],{
 /***/ 56:
 /***/ function(module, exports) {
 
-	'use strict';
+	"use strict";
 	
-	module.exports = function ($scope) {
+	module.exports = ["$scope", function ($scope) {
+	  "ngInject";
+	
 	  console.log('bar controller');
-	};
+	}];
 
 /***/ },
 
@@ -64,11 +66,11 @@ webpackJsonp([3,5],{
 	
 	var mod = module.exports = angular.module('bar', []);
 	
-	mod.controller('BarController', ['$scope', barController]);
+	mod.controller('BarController', barController);
 	
 	module.exports = mod;
 
 /***/ }
 
 });
-//# sourceMappingURL=bar-3-fa4d3232fbd0b92a9ed4-cd62d844ae51f83fed61.js.map
+//# sourceMappingURL=bar-3-4366d3dbf67c53ed2299-75a0d3f571230b93257d.js.map

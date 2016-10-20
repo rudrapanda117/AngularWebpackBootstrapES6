@@ -1,8 +1,9 @@
 import angular from 'angular';
 import uirouter from 'angular-ui-router';
-import oclazyload from 'oclazyloads';
 import 'bootstrapCSS';
 import 'bootstrapJS';
+import oclazyload from 'oclazyloads';
+
 //import module1 from './module1/module.js'
 import template1 from './module1/ctrlTmpl.html';
 import './app.scss';
@@ -36,7 +37,7 @@ var configs = function($stateProvider, $urlRouterProvider, $locationProvider) {
                     });
 
                     deferred.resolve(mod.default.controller);
-                },'module1');//naming chunkfiles 
+                },'module1');//naming chunkfiles
 
                 return deferred.promise;
             }]

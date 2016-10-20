@@ -39,7 +39,7 @@ module.exports = {
             jquery: __dirname + "/node_modules/jquery/dist/jquery.js",
             bootstrapJS: __dirname + "/node_modules/bootstrap/dist/js/bootstrap.js",
             bootstrapCSS: __dirname + "/node_modules/bootstrap/dist/css/bootstrap.css",
-            oclazyloads: __dirname + "/node_modules/oclazyload/dist/oclazyload.js",
+            oclazyloads: __dirname + "/node_modules/oclazyload/dist/ocLazyLoad.js",
         }
     },
     module: {

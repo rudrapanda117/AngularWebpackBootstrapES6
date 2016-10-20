@@ -8,7 +8,7 @@ webpackJsonp([2,5],{
 	
 	
 	// module
-	exports.push([module.id, "h1.foo {\r\n  color: red;\r\n}", ""]);
+	exports.push([module.id, "h1.foo {\n  color: red;\n}", ""]);
 	
 	// exports
 
@@ -47,9 +47,12 @@ webpackJsonp([2,5],{
 
 	'use strict';
 	
-	module.exports = function ($scope) {
+	/*@ngInject*/
+	foocontroller.$inject = ["$scope"];
+	function foocontroller($scope) {
 	  console.log('foo controller');
-	};
+	}
+	module.exports = foocontroller;
 
 /***/ },
 
@@ -71,4 +74,4 @@ webpackJsonp([2,5],{
 /***/ }
 
 });
-//# sourceMappingURL=foo-2-fa4d3232fbd0b92a9ed4-d4bcc42bf295ce733c88.js.map
+//# sourceMappingURL=foo-2-4366d3dbf67c53ed2299-b12d024ecbaea0b2c17e.js.map
