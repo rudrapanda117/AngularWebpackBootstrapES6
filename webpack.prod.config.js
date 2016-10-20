@@ -12,17 +12,35 @@ var extractBootStrapCss = new ExtractTextPlugin('vendorStyle.css', {
 });
 
 module.exports = {
-    devtool: 'eval-source-map',
+    devtool: 'source-map',
     entry: {
-        app: path.join(__dirname, '/web/app/client/app.js')
+        app: path.join(__dirname, '/web/app/client/app.js'),
+        vendor: ['jquery', 'angular', 'angular-ui-router', 'oclazyloads', 'bootstrapJS']
     },
     output: {
         path: path.join(__dirname, '/web/app/dist/'),
         filename: '[name].js',
-        publicPath: ""
+        publicPath: "",
+        chunkFilename: '[name]-[id]-[hash]-[chunkhash].js'
+/*
+[named] is replaced by the name of the chunk set at require.ensure
+
+[id] is replaced by the id of the chunk.
+
+[hash] is replaced by the hash of the compilation.
+
+[chunkhash] is replaced by the hash of the chunk.
+
+*/
     },
     resolve: {
-        modulesDirectories: ["node_modules", "bower_components"]
+        modulesDirectories: ["node_modules", "bower_components"],
+        alias: {
+            jquery: __dirname + "/node_modules/jquery/dist/jquery.js",
+            bootstrapJS: __dirname + "/node_modules/bootstrap/dist/js/bootstrap.js",
+            bootstrapCSS: __dirname + "/node_modules/bootstrap/dist/css/bootstrap.css",
+            oclazyloads: __dirname + "/node_modules/oclazyload/dist/oclazyload.js",
+        }
     },
     module: {
         loaders: [{
@@ -42,12 +60,12 @@ module.exports = {
         }, {
             test: /\.(png)$/,
             loaders: ['file-loader?name=/img/png/[name].[ext]']
-        },{
+        }, {
             test: /\.(svg|woff|woff2|ttf|eot)$/,
             loaders: ['file-loader?name=/img/[name].[ext]']
-        },
-		{
-             test: /\.(jpg)$/, loader: 'url-loader?limit=8192' 
+        }, {
+            test: /\.(jpg)$/,
+            loader: 'url-loader?limit=8192'
         }]
     },
     plugins: [
@@ -65,43 +83,45 @@ module.exports = {
         new webpack.optimize.OccurenceOrderPlugin(),
         new webpack.NoErrorsPlugin(),
 
-        /*  new webpack.NoErrorsPlugin(),
-          new webpack.optimize.DedupePlugin(),*/
+        new webpack.NoErrorsPlugin(),
+          new webpack.optimize.DedupePlugin(),
         new CopyWebpackPlugin([{
             from: 'web/app/client/error.html'
         }, {
             from: 'web/app/client/img/favicon.ico',
             to: './img/favicon.ico'
-        },
-        {
+        }, {
             from: 'web/app/client/hometemplate.html',
             to: 'hometemplate.html'
-        },
-        {
+        }, {
             from: 'web/app/client/module2',
             to: './module2'
-        },
-        {
+        }, {
             from: 'web/app/client/core',
             to: './core'
-        },
-        {
+        }, {
             from: 'web/app/client/foo',
             to: './foo'
-        },
-        {
+        }, {
             from: 'web/app/client/bar',
             to: './bar'
         }]),
-
+        //Manual vendor separation
+        //new webpack.optimize.CommonsChunkPlugin('vendor', 'vendor.bundle.js'),
         // Automatically move all modules defined outside of application directory to vendor bundle.
         // If you are using more complicated project structure, consider to specify common chunks manually.
-        new webpack.optimize.CommonsChunkPlugin({
-            name: 'vendor',
-            minChunks: function(module, count) {
-                return module.resource && module.resource.indexOf(path.resolve(__dirname, 'web')) === -1;
-            }
-        }),
+        /*  new webpack.optimize.CommonsChunkPlugin({
+              name: 'vendor',
+              minChunks: function(module, count) {
+                console.log(module.resource);
+                  return module.resource && module.resource.indexOf(path.resolve(__dirname, 'web')) === -1;
+              }
+          }),*/
+          new webpack.optimize.CommonsChunkPlugin({
+           // The order of this array matters
+           names: ["common", "vendor"],
+           minChunks: 2
+       }),
         new webpack.ProvidePlugin({
             $: "jquery",
             jQuery: "jquery"

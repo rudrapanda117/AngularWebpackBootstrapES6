@@ -1,52 +1,501 @@
-webpackJsonp([4],{
+webpackJsonp([4,5],{
 
 /***/ 0:
 /***/ function(module, exports, __webpack_require__) {
 
-	eval("'use strict';\n\nvar _angular = __webpack_require__(3);\n\nvar _angular2 = _interopRequireDefault(_angular);\n\nvar _angularUiRouter = __webpack_require__(9);\n\nvar _angularUiRouter2 = _interopRequireDefault(_angularUiRouter);\n\nvar _oclazyload = __webpack_require__(65);\n\nvar _oclazyload2 = _interopRequireDefault(_oclazyload);\n\n__webpack_require__(20);\n\n__webpack_require__(11);\n\nvar _ctrlTmpl = __webpack_require__(52);\n\nvar _ctrlTmpl2 = _interopRequireDefault(_ctrlTmpl);\n\n__webpack_require__(15);\n\n__webpack_require__(57);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar configs = function configs($stateProvider, $urlRouterProvider, $locationProvider) {\n    $urlRouterProvider.otherwise('/');\n    //$locationProvider.html5Mode(true);\n    $stateProvider.state('home', {\n        url: '/',\n        /*template:'HomeTemplate<a ui-sref=\"next\">Show Profile</a>'*/\n        templateUrl: 'hometemplate.html'\n    }).state('next', {\n        url: '/module1',\n        template: _ctrlTmpl2.default,\n        controller: 'AppCtrl',\n        controllerAs: 'ctrl',\n        resolve: ['$q', '$ocLazyLoad', function ($q, $ocLazyLoad) {\n            var deferred = $q.defer();\n\n            __webpack_require__.e/* nsure */(0, function (require) {\n                var mod = __webpack_require__(64);\n                console.log(\"Controller \", mod.default);\n                $ocLazyLoad.load({\n                    name: mod.default.name\n                });\n\n                deferred.resolve(mod.default.controller);\n            });\n\n            return deferred.promise;\n        }]\n    }).state('nestedview', { //State demonstrating Nested views\n        url: \"/nestedview\",\n        templateUrl: \"./module2/nestedview.html\"\n    }).state('nestedview.example1', { //nested state [products is the nested state of business state]\n        url: \"/example1\",\n        templateUrl: \"./module2/nestedviewexpl1.html\",\n        controller: function controller($scope) {\n            $scope.products = [\"Computer\", \"Printers\", \"Phones\", \"Bags\"];\n        }\n    }).state('nestedview.example2', { //nested state [services is the nested state of business state]\n        url: \"/example2\",\n        templateUrl: \"./module2/nestedviewexpl2.html\",\n        controller: function controller($scope) {\n            $scope.services = [\"Selling\", \"Support\", \"Delivery\", \"Reparation\"];\n        }\n    }).state('namedview', { //State demonstrating Multiple,named views\n        url: \"/namedview\",\n        views: {\n            \"\": {\n                templateUrl: \"./module2/namedview.html\"\n            },\n            \"view1@namedview\": {\n                template: \"Write whatever you want, it's your virtual company.\"\n            },\n            \"view2@namedview\": {\n                templateUrl: \"./module2/namedviewexample1.html\",\n                controller: function controller($scope) {\n                    $scope.clients = [\"HP\", \"IBM\", \"MicroSoft\"];\n                }\n            }\n        }\n    }).state('lazyload1', {\n        url: '/foo',\n        template: __webpack_require__(51),\n        controller: 'FooController',\n        resolve: ['$q', '$ocLazyLoad', function ($q, $ocLazyLoad) {\n            var deferred = $q.defer();\n\n            __webpack_require__.e/* nsure */(2, function (require) {\n                var mod = __webpack_require__(59);\n                console.log(\"mod \", mod);\n                $ocLazyLoad.load({\n                    name: mod.name\n                });\n\n                deferred.resolve(mod.controller);\n            });\n\n            return deferred.promise;\n        }]\n    }).state('lazyload2', {\n        url: '/bar',\n        template: __webpack_require__(50),\n        controller: 'BarController',\n        resolve: ['$q', '$ocLazyLoad', function ($q, $ocLazyLoad) {\n            var deferred = $q.defer();\n\n            __webpack_require__.e/* nsure */(3, function (require) {\n                var mod = __webpack_require__(56);\n                $ocLazyLoad.load({\n                    name: mod.name\n                });\n\n                deferred.resolve(mod.controller);\n            });\n\n            return deferred.promise;\n        }]\n    });\n};\n//import module1 from './module1/module.js'\n\n\nconfigs.$inject = ['$stateProvider', '$urlRouterProvider', '$locationProvider'];\n\n//angular.module('app', [uirouter, module1, oclazyload])\n_angular2.default.module('app', [_angularUiRouter2.default, _oclazyload2.default]).config(configs);\n\n_angular2.default.element(function () {\n    _angular2.default.bootstrap(document, ['app']);\n});//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi93ZWIvYXBwL2NsaWVudC9hcHAuanM/NzNmZCJdLCJuYW1lcyI6WyJjb25maWdzIiwiJHN0YXRlUHJvdmlkZXIiLCIkdXJsUm91dGVyUHJvdmlkZXIiLCIkbG9jYXRpb25Qcm92aWRlciIsIm90aGVyd2lzZSIsInN0YXRlIiwidXJsIiwidGVtcGxhdGVVcmwiLCJ0ZW1wbGF0ZSIsImNvbnRyb2xsZXIiLCJjb250cm9sbGVyQXMiLCJyZXNvbHZlIiwiJHEiLCIkb2NMYXp5TG9hZCIsImRlZmVycmVkIiwiZGVmZXIiLCJyZXF1aXJlIiwibW9kIiwiY29uc29sZSIsImxvZyIsImRlZmF1bHQiLCJsb2FkIiwibmFtZSIsInByb21pc2UiLCIkc2NvcGUiLCJwcm9kdWN0cyIsInNlcnZpY2VzIiwidmlld3MiLCJjbGllbnRzIiwiJGluamVjdCIsIm1vZHVsZSIsImNvbmZpZyIsImVsZW1lbnQiLCJib290c3RyYXAiLCJkb2N1bWVudCJdLCJtYXBwaW5ncyI6Ijs7QUFBQTs7OztBQUNBOzs7O0FBQ0E7Ozs7QUFDQTs7QUFDQTs7QUFFQTs7OztBQUNBOztBQUNBOzs7O0FBTUEsSUFBSUEsVUFBVSxTQUFWQSxPQUFVLENBQVNDLGNBQVQsRUFBeUJDLGtCQUF6QixFQUE2Q0MsaUJBQTdDLEVBQWdFO0FBQzFFRCx1QkFBbUJFLFNBQW5CLENBQTZCLEdBQTdCO0FBQ0E7QUFDQUgsbUJBQ0tJLEtBREwsQ0FDVyxNQURYLEVBQ21CO0FBQ1hDLGFBQUssR0FETTtBQUVYO0FBQ0FDLHFCQUFhO0FBSEYsS0FEbkIsRUFLT0YsS0FMUCxDQUthLE1BTGIsRUFLcUI7QUFDYkMsYUFBSyxVQURRO0FBRWJFLG9DQUZhO0FBR2JDLG9CQUFZLFNBSEM7QUFJYkMsc0JBQWMsTUFKRDtBQUtiQyxpQkFBUyxDQUFDLElBQUQsRUFBTyxhQUFQLEVBQXNCLFVBQVNDLEVBQVQsRUFBYUMsV0FBYixFQUEwQjtBQUNyRCxnQkFBSUMsV0FBV0YsR0FBR0csS0FBSCxFQUFmOztB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RUFBUixDQUFWO0FBQ0FILDRCQUFZUSxJQUFaLENBQWlCO0FBQ2JDLDBCQUFNTCxJQUFJSztBQURHLGlCQUFqQjs7QUFJQVIseUJBQVNILE9BQVQsQ0FBaUJNLElBQUlSLFVBQXJCO0FBQ0gsYUFQRDs7QUFTQSxtQkFBT0ssU0FBU1MsT0FBaEI7QUFDSCxTQWJRO0FBSk8sS0FoRnhCO0FBbUdILENBdEdEO0FBVEE7OztBQWlIQXZCLFFBQVE2QixPQUFSLEdBQWtCLENBQUMsZ0JBQUQsRUFBbUIsb0JBQW5CLEVBQXlDLG1CQUF6QyxDQUFsQjs7QUFFQTtBQUNBLGtCQUFRQyxNQUFSLENBQWUsS0FBZixFQUFzQixpREFBdEIsRUFDS0MsTUFETCxDQUNZL0IsT0FEWjs7QUFHQSxrQkFBUWdDLE9BQVIsQ0FBZ0IsWUFBVztBQUN2QixzQkFBUUMsU0FBUixDQUFrQkMsUUFBbEIsRUFBNEIsQ0FBQyxLQUFELENBQTVCO0FBQ0gsQ0FGRCIsImZpbGUiOiIwLmpzIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IGFuZ3VsYXIgZnJvbSAnYW5ndWxhcic7XHJcbmltcG9ydCB1aXJvdXRlciBmcm9tICdhbmd1bGFyLXVpLXJvdXRlcic7XHJcbmltcG9ydCBvY2xhenlsb2FkIGZyb20gJ29jbGF6eWxvYWQnO1xyXG5pbXBvcnQgJ2Jvb3RzdHJhcC9kaXN0L2Nzcy9ib290c3RyYXAuY3NzJztcclxuaW1wb3J0ICdib290c3RyYXAvZGlzdC9qcy9ib290c3RyYXAuanMnO1xyXG4vL2ltcG9ydCBtb2R1bGUxIGZyb20gJy4vbW9kdWxlMS9tb2R1bGUuanMnXHJcbmltcG9ydCB0ZW1wbGF0ZTEgZnJvbSAnLi9tb2R1bGUxL2N0cmxUbXBsLmh0bWwnO1xyXG5pbXBvcnQgJy4vYXBwLnNjc3MnO1xyXG5pbXBvcnQgJy4vY29yZSc7XHJcblxyXG5cclxuXHJcblxyXG5cclxudmFyIGNvbmZpZ3MgPSBmdW5jdGlvbigkc3RhdGVQcm92aWRlciwgJHVybFJvdXRlclByb3ZpZGVyLCAkbG9jYXRpb25Qcm92aWRlcikge1xyXG4gICAgJHVybFJvdXRlclByb3ZpZGVyLm90aGVyd2lzZSgnLycpO1xyXG4gICAgLy8kbG9jYXRpb25Qcm92aWRlci5odG1sNU1vZGUodHJ1ZSk7XHJcbiAgICAkc3RhdGVQcm92aWRlclxyXG4gICAgICAgIC5zdGF0ZSgnaG9tZScsIHtcclxuICAgICAgICAgICAgdXJsOiAnLycsXHJcbiAgICAgICAgICAgIC8qdGVtcGxhdGU6J0hvbWVUZW1wbGF0ZTxhIHVpLXNyZWY9XCJuZXh0XCI+U2hvdyBQcm9maWxlPC9hPicqL1xyXG4gICAgICAgICAgICB0ZW1wbGF0ZVVybDogJ2hvbWV0ZW1wbGF0ZS5odG1sJ1xyXG4gICAgICAgIH0pLnN0YXRlKCduZXh0Jywge1xyXG4gICAgICAgICAgICB1cmw6ICcvbW9kdWxlMScsXHJcbiAgICAgICAgICAgIHRlbXBsYXRlOiB0ZW1wbGF0ZTEsXHJcbiAgICAgICAgICAgIGNvbnRyb2xsZXI6ICdBcHBDdHJsJyxcclxuICAgICAgICAgICAgY29udHJvbGxlckFzOiAnY3RybCcsXHJcbiAgICAgICAgICAgIHJlc29sdmU6IFsnJHEnLCAnJG9jTGF6eUxvYWQnLCBmdW5jdGlvbigkcSwgJG9jTGF6eUxvYWQpIHtcclxuICAgICAgICAgICAgICAgIHZhciBkZWZlcnJlZCA9ICRxLmRlZmVyKCk7XHJcblxyXG4gICAgICAgICAgICAgICAgcmVxdWlyZS5lbnN1cmUoW10sIGZ1bmN0aW9uKHJlcXVpcmUpIHtcclxuICAgICAgICAgICAgICAgICAgICB2YXIgbW9kID0gcmVxdWlyZSgnLi9tb2R1bGUxL21vZHVsZS5qcycpO1xyXG4gICAgICAgICAgICAgICAgICAgIGNvbnNvbGUubG9nKFwiQ29udHJvbGxlciBcIixtb2QuZGVmYXVsdCk7XHJcbiAgICAgICAgICAgICAgICAgICAgJG9jTGF6eUxvYWQubG9hZCh7XHJcbiAgICAgICAgICAgICAgICAgICAgICAgIG5hbWU6IG1vZC5kZWZhdWx0Lm5hbWUsXHJcbiAgICAgICAgICAgICAgICAgICAgfSk7XHJcblxyXG4gICAgICAgICAgICAgICAgICAgIGRlZmVycmVkLnJlc29sdmUobW9kLmRlZmF1bHQuY29udHJvbGxlcik7XHJcbiAgICAgICAgICAgICAgICB9KTtcclxuXHJcbiAgICAgICAgICAgICAgICByZXR1cm4gZGVmZXJyZWQucHJvbWlzZTtcclxuICAgICAgICAgICAgfV1cclxuICAgICAgICB9KS5zdGF0ZSgnbmVzdGVkdmlldycsIHsgLy9TdGF0ZSBkZW1vbnN0cmF0aW5nIE5lc3RlZCB2aWV3c1xyXG4gICAgICAgICAgICB1cmw6IFwiL25lc3RlZHZpZXdcIixcclxuICAgICAgICAgICAgdGVtcGxhdGVVcmw6IFwiLi9tb2R1bGUyL25lc3RlZHZpZXcuaHRtbFwiXHJcbiAgICAgICAgfSlcclxuICAgICAgICAuc3RhdGUoJ25lc3RlZHZpZXcuZXhhbXBsZTEnLCB7IC8vbmVzdGVkIHN0YXRlIFtwcm9kdWN0cyBpcyB0aGUgbmVzdGVkIHN0YXRlIG9mIGJ1c2luZXNzIHN0YXRlXVxyXG4gICAgICAgICAgICB1cmw6IFwiL2V4YW1wbGUxXCIsXHJcbiAgICAgICAgICAgIHRlbXBsYXRlVXJsOiBcIi4vbW9kdWxlMi9uZXN0ZWR2aWV3ZXhwbDEuaHRtbFwiLFxyXG4gICAgICAgICAgICBjb250cm9sbGVyOiBmdW5jdGlvbigkc2NvcGUpIHtcclxuICAgICAgICAgICAgICAgICRzY29wZS5wcm9kdWN0cyA9IFtcIkNvbXB1dGVyXCIsIFwiUHJpbnRlcnNcIiwgXCJQaG9uZXNcIiwgXCJCYWdzXCJdO1xyXG4gICAgICAgICAgICB9XHJcbiAgICAgICAgfSlcclxuICAgICAgICAuc3RhdGUoJ25lc3RlZHZpZXcuZXhhbXBsZTInLCB7IC8vbmVzdGVkIHN0YXRlIFtzZXJ2aWNlcyBpcyB0aGUgbmVzdGVkIHN0YXRlIG9mIGJ1c2luZXNzIHN0YXRlXVxyXG4gICAgICAgICAgICB1cmw6IFwiL2V4YW1wbGUyXCIsXHJcbiAgICAgICAgICAgIHRlbXBsYXRlVXJsOiBcIi4vbW9kdWxlMi9uZXN0ZWR2aWV3ZXhwbDIuaHRtbFwiLFxyXG4gICAgICAgICAgICBjb250cm9sbGVyOiBmdW5jdGlvbigkc2NvcGUpIHtcclxuICAgICAgICAgICAgICAgICRzY29wZS5zZXJ2aWNlcyA9IFtcIlNlbGxpbmdcIiwgXCJTdXBwb3J0XCIsIFwiRGVsaXZlcnlcIiwgXCJSZXBhcmF0aW9uXCJdO1xyXG4gICAgICAgICAgICB9XHJcbiAgICAgICAgfSlcclxuICAgICAgICAuc3RhdGUoJ25hbWVkdmlldycsIHsgLy9TdGF0ZSBkZW1vbnN0cmF0aW5nIE11bHRpcGxlLG5hbWVkIHZpZXdzXHJcbiAgICAgICAgICAgIHVybDogXCIvbmFtZWR2aWV3XCIsXHJcbiAgICAgICAgICAgIHZpZXdzOiB7XHJcbiAgICAgICAgICAgICAgICBcIlwiOiB7XHJcbiAgICAgICAgICAgICAgICAgICAgdGVtcGxhdGVVcmw6IFwiLi9tb2R1bGUyL25hbWVkdmlldy5odG1sXCJcclxuICAgICAgICAgICAgICAgIH0sXHJcbiAgICAgICAgICAgICAgICBcInZpZXcxQG5hbWVkdmlld1wiOiB7XHJcbiAgICAgICAgICAgICAgICAgICAgdGVtcGxhdGU6IFwiV3JpdGUgd2hhdGV2ZXIgeW91IHdhbnQsIGl0J3MgeW91ciB2aXJ0dWFsIGNvbXBhbnkuXCJcclxuICAgICAgICAgICAgICAgIH0sXHJcbiAgICAgICAgICAgICAgICBcInZpZXcyQG5hbWVkdmlld1wiOiB7XHJcbiAgICAgICAgICAgICAgICAgICAgdGVtcGxhdGVVcmw6IFwiLi9tb2R1bGUyL25hbWVkdmlld2V4YW1wbGUxLmh0bWxcIixcclxuICAgICAgICAgICAgICAgICAgICBjb250cm9sbGVyOiBmdW5jdGlvbigkc2NvcGUpIHtcclxuICAgICAgICAgICAgICAgICAgICAgICAgJHNjb3BlLmNsaWVudHMgPSBbXCJIUFwiLCBcIklCTVwiLCBcIk1pY3JvU29mdFwiXTtcclxuICAgICAgICAgICAgICAgICAgICB9XHJcbiAgICAgICAgICAgICAgICB9XHJcbiAgICAgICAgICAgIH1cclxuICAgICAgICB9KVxyXG4gICAgICAgIC5zdGF0ZSgnbGF6eWxvYWQxJywge1xyXG4gICAgICAgICAgICB1cmw6ICcvZm9vJyxcclxuICAgICAgICAgICAgdGVtcGxhdGU6IHJlcXVpcmUoJy4vZm9vL2Zvby5odG1sJyksXHJcbiAgICAgICAgICAgIGNvbnRyb2xsZXI6ICdGb29Db250cm9sbGVyJyxcclxuICAgICAgICAgICAgcmVzb2x2ZTogWyckcScsICckb2NMYXp5TG9hZCcsIGZ1bmN0aW9uKCRxLCAkb2NMYXp5TG9hZCkge1xyXG4gICAgICAgICAgICAgICAgdmFyIGRlZmVycmVkID0gJHEuZGVmZXIoKTtcclxuXHJcbiAgICAgICAgICAgICAgICByZXF1aXJlLmVuc3VyZShbXSwgZnVuY3Rpb24ocmVxdWlyZSkge1xyXG4gICAgICAgICAgICAgICAgICAgIHZhciBtb2QgPSByZXF1aXJlKCcuL2ZvbycpO1xyXG4gICAgICAgICAgICAgICAgICAgIGNvbnNvbGUubG9nKFwibW9kIFwiLG1vZCk7XHJcbiAgICAgICAgICAgICAgICAgICAgJG9jTGF6eUxvYWQubG9hZCh7XHJcbiAgICAgICAgICAgICAgICAgICAgICAgIG5hbWU6IG1vZC5uYW1lLFxyXG4gICAgICAgICAgICAgICAgICAgIH0pO1xyXG5cclxuICAgICAgICAgICAgICAgICAgICBkZWZlcnJlZC5yZXNvbHZlKG1vZC5jb250cm9sbGVyKTtcclxuICAgICAgICAgICAgICAgIH0pO1xyXG5cclxuICAgICAgICAgICAgICAgIHJldHVybiBkZWZlcnJlZC5wcm9taXNlO1xyXG4gICAgICAgICAgICB9XVxyXG4gICAgICAgIH0pXHJcbiAgICAgICAgLnN0YXRlKCdsYXp5bG9hZDInLCB7XHJcbiAgICAgICAgICAgIHVybDogJy9iYXInLFxyXG4gICAgICAgICAgICB0ZW1wbGF0ZTogcmVxdWlyZSgnLi9iYXIvYmFyLmh0bWwnKSxcclxuICAgICAgICAgICAgY29udHJvbGxlcjogJ0JhckNvbnRyb2xsZXInLFxyXG4gICAgICAgICAgICByZXNvbHZlOiBbJyRxJywgJyRvY0xhenlMb2FkJywgZnVuY3Rpb24oJHEsICRvY0xhenlMb2FkKSB7XHJcbiAgICAgICAgICAgICAgICB2YXIgZGVmZXJyZWQgPSAkcS5kZWZlcigpO1xyXG5cclxuICAgICAgICAgICAgICAgIHJlcXVpcmUuZW5zdXJlKFtdLCBmdW5jdGlvbihyZXF1aXJlKSB7XHJcbiAgICAgICAgICAgICAgICAgICAgdmFyIG1vZCA9IHJlcXVpcmUoJy4vYmFyJyk7XHJcbiAgICAgICAgICAgICAgICAgICAgJG9jTGF6eUxvYWQubG9hZCh7XHJcbiAgICAgICAgICAgICAgICAgICAgICAgIG5hbWU6IG1vZC5uYW1lLFxyXG4gICAgICAgICAgICAgICAgICAgIH0pO1xyXG5cclxuICAgICAgICAgICAgICAgICAgICBkZWZlcnJlZC5yZXNvbHZlKG1vZC5jb250cm9sbGVyKTtcclxuICAgICAgICAgICAgICAgIH0pO1xyXG5cclxuICAgICAgICAgICAgICAgIHJldHVybiBkZWZlcnJlZC5wcm9taXNlO1xyXG4gICAgICAgICAgICB9XVxyXG4gICAgICAgIH0pO1xyXG59XHJcblxyXG5jb25maWdzLiRpbmplY3QgPSBbJyRzdGF0ZVByb3ZpZGVyJywgJyR1cmxSb3V0ZXJQcm92aWRlcicsICckbG9jYXRpb25Qcm92aWRlciddO1xyXG5cclxuLy9hbmd1bGFyLm1vZHVsZSgnYXBwJywgW3Vpcm91dGVyLCBtb2R1bGUxLCBvY2xhenlsb2FkXSlcclxuYW5ndWxhci5tb2R1bGUoJ2FwcCcsIFt1aXJvdXRlciwgb2NsYXp5bG9hZF0pXHJcbiAgICAuY29uZmlnKGNvbmZpZ3MpO1xyXG5cclxuYW5ndWxhci5lbGVtZW50KGZ1bmN0aW9uKCkge1xyXG4gICAgYW5ndWxhci5ib290c3RyYXAoZG9jdW1lbnQsIFsnYXBwJ10pO1xyXG59KTtcclxuXG5cblxuLyoqIFdFQlBBQ0sgRk9PVEVSICoqXG4gKiogLi93ZWIvYXBwL2NsaWVudC9hcHAuanNcbiAqKi8iXSwic291cmNlUm9vdCI6IiJ9");
+	'use strict';
+	
+	var _angular = __webpack_require__(5);
+	
+	var _angular2 = _interopRequireDefault(_angular);
+	
+	var _angularUiRouter = __webpack_require__(4);
+	
+	var _angularUiRouter2 = _interopRequireDefault(_angularUiRouter);
+	
+	var _oclazyloads = __webpack_require__(9);
+	
+	var _oclazyloads2 = _interopRequireDefault(_oclazyloads);
+	
+	__webpack_require__(21);
+	
+	__webpack_require__(6);
+	
+	var _ctrlTmpl = __webpack_require__(53);
+	
+	var _ctrlTmpl2 = _interopRequireDefault(_ctrlTmpl);
+	
+	__webpack_require__(16);
+	
+	__webpack_require__(58);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	var configs = function configs($stateProvider, $urlRouterProvider, $locationProvider) {
+	    $urlRouterProvider.otherwise('/');
+	    //$locationProvider.html5Mode(true);
+	    $stateProvider.state('home', {
+	        url: '/',
+	        /*template:'HomeTemplate<a ui-sref="next">Show Profile</a>'*/
+	        templateUrl: 'hometemplate.html'
+	    }).state('next', {
+	        url: '/module1',
+	        template: _ctrlTmpl2.default,
+	        controller: 'AppCtrl',
+	        controllerAs: 'ctrl',
+	        resolve: ['$q', '$ocLazyLoad', function ($q, $ocLazyLoad) {
+	            var deferred = $q.defer();
+	
+	            __webpack_require__.e/* nsure */(0, function (require) {
+	                var mod = __webpack_require__(65);
+	                console.log("Controller ", mod.default);
+	                $ocLazyLoad.load({
+	                    name: mod.default.name
+	                });
+	
+	                deferred.resolve(mod.default.controller);
+	            }); //naming chunkfiles 
+	
+	            return deferred.promise;
+	        }]
+	    }).state('nestedview', { //State demonstrating Nested views
+	        url: "/nestedview",
+	        templateUrl: "./module2/nestedview.html"
+	    }).state('nestedview.example1', { //nested state [products is the nested state of business state]
+	        url: "/example1",
+	        templateUrl: "./module2/nestedviewexpl1.html",
+	        controller: function controller($scope) {
+	            $scope.products = ["Computer", "Printers", "Phones", "Bags"];
+	        }
+	    }).state('nestedview.example2', { //nested state [services is the nested state of business state]
+	        url: "/example2",
+	        templateUrl: "./module2/nestedviewexpl2.html",
+	        controller: function controller($scope) {
+	            $scope.services = ["Selling", "Support", "Delivery", "Reparation"];
+	        }
+	    }).state('namedview', { //State demonstrating Multiple,named views
+	        url: "/namedview",
+	        views: {
+	            "": {
+	                templateUrl: "./module2/namedview.html"
+	            },
+	            "view1@namedview": {
+	                template: "Write whatever you want, it's your virtual company."
+	            },
+	            "view2@namedview": {
+	                templateUrl: "./module2/namedviewexample1.html",
+	                controller: function controller($scope) {
+	                    $scope.clients = ["HP", "IBM", "MicroSoft"];
+	                }
+	            }
+	        }
+	    }).state('lazyload1', {
+	        url: '/foo',
+	        template: __webpack_require__(52),
+	        controller: 'FooController',
+	        resolve: ['$q', '$ocLazyLoad', function ($q, $ocLazyLoad) {
+	            var deferred = $q.defer();
+	
+	            __webpack_require__.e/* nsure */(2, function (require) {
+	                var mod = __webpack_require__(60);
+	                console.log("mod ", mod);
+	                $ocLazyLoad.load({
+	                    name: mod.name
+	                });
+	
+	                deferred.resolve(mod.controller);
+	            });
+	
+	            return deferred.promise;
+	        }]
+	    }).state('lazyload2', {
+	        url: '/bar',
+	        template: __webpack_require__(51),
+	        controller: 'BarController',
+	        resolve: ['$q', '$ocLazyLoad', function ($q, $ocLazyLoad) {
+	            var deferred = $q.defer();
+	
+	            __webpack_require__.e/* nsure */(3, function (require) {
+	                var mod = __webpack_require__(57);
+	                $ocLazyLoad.load({
+	                    name: mod.name
+	                });
+	
+	                deferred.resolve(mod.controller);
+	            });
+	
+	            return deferred.promise;
+	        }]
+	    });
+	};
+	//import module1 from './module1/module.js'
+	
+	
+	configs.$inject = ['$stateProvider', '$urlRouterProvider', '$locationProvider'];
+	
+	//angular.module('app', [uirouter, module1, oclazyload])
+	_angular2.default.module('app', [_angularUiRouter2.default, _oclazyloads2.default]).config(configs);
+	
+	_angular2.default.element(function () {
+	    _angular2.default.bootstrap(document, ['app']);
+	});
 
 /***/ },
 
-/***/ 15:
+/***/ 1:
 /***/ function(module, exports) {
 
-	eval("// removed by extract-text-webpack-plugin//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi93ZWIvYXBwL2NsaWVudC9hcHAuc2Nzcz83YWRhIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBIiwiZmlsZSI6IjE1LmpzIiwic291cmNlc0NvbnRlbnQiOlsiLy8gcmVtb3ZlZCBieSBleHRyYWN0LXRleHQtd2VicGFjay1wbHVnaW5cblxuXG4vKioqKioqKioqKioqKioqKipcbiAqKiBXRUJQQUNLIEZPT1RFUlxuICoqIC4vd2ViL2FwcC9jbGllbnQvYXBwLnNjc3NcbiAqKiBtb2R1bGUgaWQgPSAxNVxuICoqIG1vZHVsZSBjaHVua3MgPSA0XG4gKiovIl0sInNvdXJjZVJvb3QiOiIifQ==");
+	/*
+		MIT License http://www.opensource.org/licenses/mit-license.php
+		Author Tobias Koppers @sokra
+	*/
+	// css base code, injected by the css-loader
+	module.exports = function() {
+		var list = [];
+	
+		// return the list of modules as css string
+		list.toString = function toString() {
+			var result = [];
+			for(var i = 0; i < this.length; i++) {
+				var item = this[i];
+				if(item[2]) {
+					result.push("@media " + item[2] + "{" + item[1] + "}");
+				} else {
+					result.push(item[1]);
+				}
+			}
+			return result.join("");
+		};
+	
+		// import a list of modules into the list
+		list.i = function(modules, mediaQuery) {
+			if(typeof modules === "string")
+				modules = [[null, modules, ""]];
+			var alreadyImportedModules = {};
+			for(var i = 0; i < this.length; i++) {
+				var id = this[i][0];
+				if(typeof id === "number")
+					alreadyImportedModules[id] = true;
+			}
+			for(i = 0; i < modules.length; i++) {
+				var item = modules[i];
+				// skip already imported module
+				// this implementation is not 100% perfect for weird media query combinations
+				//  when a module is imported multiple times with different media queries.
+				//  I hope this will never occur (Hey this way we have smaller bundles)
+				if(typeof item[0] !== "number" || !alreadyImportedModules[item[0]]) {
+					if(mediaQuery && !item[2]) {
+						item[2] = mediaQuery;
+					} else if(mediaQuery) {
+						item[2] = "(" + item[2] + ") and (" + mediaQuery + ")";
+					}
+					list.push(item);
+				}
+			}
+		};
+		return list;
+	};
+
 
 /***/ },
 
-/***/ 17:
+/***/ 3:
+/***/ function(module, exports, __webpack_require__) {
+
+	/*
+		MIT License http://www.opensource.org/licenses/mit-license.php
+		Author Tobias Koppers @sokra
+	*/
+	var stylesInDom = {},
+		memoize = function(fn) {
+			var memo;
+			return function () {
+				if (typeof memo === "undefined") memo = fn.apply(this, arguments);
+				return memo;
+			};
+		},
+		isOldIE = memoize(function() {
+			return /msie [6-9]\b/.test(window.navigator.userAgent.toLowerCase());
+		}),
+		getHeadElement = memoize(function () {
+			return document.head || document.getElementsByTagName("head")[0];
+		}),
+		singletonElement = null,
+		singletonCounter = 0,
+		styleElementsInsertedAtTop = [];
+	
+	module.exports = function(list, options) {
+		if(false) {
+			if(typeof document !== "object") throw new Error("The style-loader cannot be used in a non-browser environment");
+		}
+	
+		options = options || {};
+		// Force single-tag solution on IE6-9, which has a hard limit on the # of <style>
+		// tags it will allow on a page
+		if (typeof options.singleton === "undefined") options.singleton = isOldIE();
+	
+		// By default, add <style> tags to the bottom of <head>.
+		if (typeof options.insertAt === "undefined") options.insertAt = "bottom";
+	
+		var styles = listToStyles(list);
+		addStylesToDom(styles, options);
+	
+		return function update(newList) {
+			var mayRemove = [];
+			for(var i = 0; i < styles.length; i++) {
+				var item = styles[i];
+				var domStyle = stylesInDom[item.id];
+				domStyle.refs--;
+				mayRemove.push(domStyle);
+			}
+			if(newList) {
+				var newStyles = listToStyles(newList);
+				addStylesToDom(newStyles, options);
+			}
+			for(var i = 0; i < mayRemove.length; i++) {
+				var domStyle = mayRemove[i];
+				if(domStyle.refs === 0) {
+					for(var j = 0; j < domStyle.parts.length; j++)
+						domStyle.parts[j]();
+					delete stylesInDom[domStyle.id];
+				}
+			}
+		};
+	}
+	
+	function addStylesToDom(styles, options) {
+		for(var i = 0; i < styles.length; i++) {
+			var item = styles[i];
+			var domStyle = stylesInDom[item.id];
+			if(domStyle) {
+				domStyle.refs++;
+				for(var j = 0; j < domStyle.parts.length; j++) {
+					domStyle.parts[j](item.parts[j]);
+				}
+				for(; j < item.parts.length; j++) {
+					domStyle.parts.push(addStyle(item.parts[j], options));
+				}
+			} else {
+				var parts = [];
+				for(var j = 0; j < item.parts.length; j++) {
+					parts.push(addStyle(item.parts[j], options));
+				}
+				stylesInDom[item.id] = {id: item.id, refs: 1, parts: parts};
+			}
+		}
+	}
+	
+	function listToStyles(list) {
+		var styles = [];
+		var newStyles = {};
+		for(var i = 0; i < list.length; i++) {
+			var item = list[i];
+			var id = item[0];
+			var css = item[1];
+			var media = item[2];
+			var sourceMap = item[3];
+			var part = {css: css, media: media, sourceMap: sourceMap};
+			if(!newStyles[id])
+				styles.push(newStyles[id] = {id: id, parts: [part]});
+			else
+				newStyles[id].parts.push(part);
+		}
+		return styles;
+	}
+	
+	function insertStyleElement(options, styleElement) {
+		var head = getHeadElement();
+		var lastStyleElementInsertedAtTop = styleElementsInsertedAtTop[styleElementsInsertedAtTop.length - 1];
+		if (options.insertAt === "top") {
+			if(!lastStyleElementInsertedAtTop) {
+				head.insertBefore(styleElement, head.firstChild);
+			} else if(lastStyleElementInsertedAtTop.nextSibling) {
+				head.insertBefore(styleElement, lastStyleElementInsertedAtTop.nextSibling);
+			} else {
+				head.appendChild(styleElement);
+			}
+			styleElementsInsertedAtTop.push(styleElement);
+		} else if (options.insertAt === "bottom") {
+			head.appendChild(styleElement);
+		} else {
+			throw new Error("Invalid value for parameter 'insertAt'. Must be 'top' or 'bottom'.");
+		}
+	}
+	
+	function removeStyleElement(styleElement) {
+		styleElement.parentNode.removeChild(styleElement);
+		var idx = styleElementsInsertedAtTop.indexOf(styleElement);
+		if(idx >= 0) {
+			styleElementsInsertedAtTop.splice(idx, 1);
+		}
+	}
+	
+	function createStyleElement(options) {
+		var styleElement = document.createElement("style");
+		styleElement.type = "text/css";
+		insertStyleElement(options, styleElement);
+		return styleElement;
+	}
+	
+	function createLinkElement(options) {
+		var linkElement = document.createElement("link");
+		linkElement.rel = "stylesheet";
+		insertStyleElement(options, linkElement);
+		return linkElement;
+	}
+	
+	function addStyle(obj, options) {
+		var styleElement, update, remove;
+	
+		if (options.singleton) {
+			var styleIndex = singletonCounter++;
+			styleElement = singletonElement || (singletonElement = createStyleElement(options));
+			update = applyToSingletonTag.bind(null, styleElement, styleIndex, false);
+			remove = applyToSingletonTag.bind(null, styleElement, styleIndex, true);
+		} else if(obj.sourceMap &&
+			typeof URL === "function" &&
+			typeof URL.createObjectURL === "function" &&
+			typeof URL.revokeObjectURL === "function" &&
+			typeof Blob === "function" &&
+			typeof btoa === "function") {
+			styleElement = createLinkElement(options);
+			update = updateLink.bind(null, styleElement);
+			remove = function() {
+				removeStyleElement(styleElement);
+				if(styleElement.href)
+					URL.revokeObjectURL(styleElement.href);
+			};
+		} else {
+			styleElement = createStyleElement(options);
+			update = applyToTag.bind(null, styleElement);
+			remove = function() {
+				removeStyleElement(styleElement);
+			};
+		}
+	
+		update(obj);
+	
+		return function updateStyle(newObj) {
+			if(newObj) {
+				if(newObj.css === obj.css && newObj.media === obj.media && newObj.sourceMap === obj.sourceMap)
+					return;
+				update(obj = newObj);
+			} else {
+				remove();
+			}
+		};
+	}
+	
+	var replaceText = (function () {
+		var textStore = [];
+	
+		return function (index, replacement) {
+			textStore[index] = replacement;
+			return textStore.filter(Boolean).join('\n');
+		};
+	})();
+	
+	function applyToSingletonTag(styleElement, index, remove, obj) {
+		var css = remove ? "" : obj.css;
+	
+		if (styleElement.styleSheet) {
+			styleElement.styleSheet.cssText = replaceText(index, css);
+		} else {
+			var cssNode = document.createTextNode(css);
+			var childNodes = styleElement.childNodes;
+			if (childNodes[index]) styleElement.removeChild(childNodes[index]);
+			if (childNodes.length) {
+				styleElement.insertBefore(cssNode, childNodes[index]);
+			} else {
+				styleElement.appendChild(cssNode);
+			}
+		}
+	}
+	
+	function applyToTag(styleElement, obj) {
+		var css = obj.css;
+		var media = obj.media;
+	
+		if(media) {
+			styleElement.setAttribute("media", media)
+		}
+	
+		if(styleElement.styleSheet) {
+			styleElement.styleSheet.cssText = css;
+		} else {
+			while(styleElement.firstChild) {
+				styleElement.removeChild(styleElement.firstChild);
+			}
+			styleElement.appendChild(document.createTextNode(css));
+		}
+	}
+	
+	function updateLink(linkElement, obj) {
+		var css = obj.css;
+		var sourceMap = obj.sourceMap;
+	
+		if(sourceMap) {
+			// http://stackoverflow.com/a/26603875
+			css += "\n/*# sourceMappingURL=data:application/json;base64," + btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap)))) + " */";
+		}
+	
+		var blob = new Blob([css], { type: "text/css" });
+	
+		var oldSrc = linkElement.href;
+	
+		linkElement.href = URL.createObjectURL(blob);
+	
+		if(oldSrc)
+			URL.revokeObjectURL(oldSrc);
+	}
+
+
+/***/ },
+
+/***/ 16:
 /***/ function(module, exports) {
 
-	eval("// removed by extract-text-webpack-plugin//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi93ZWIvYXBwL2NsaWVudC9jb3JlL21haW4uc2Nzcz9iMjljIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBIiwiZmlsZSI6IjE3LmpzIiwic291cmNlc0NvbnRlbnQiOlsiLy8gcmVtb3ZlZCBieSBleHRyYWN0LXRleHQtd2VicGFjay1wbHVnaW5cblxuXG4vKioqKioqKioqKioqKioqKipcbiAqKiBXRUJQQUNLIEZPT1RFUlxuICoqIC4vd2ViL2FwcC9jbGllbnQvY29yZS9tYWluLnNjc3NcbiAqKiBtb2R1bGUgaWQgPSAxN1xuICoqIG1vZHVsZSBjaHVua3MgPSA0XG4gKiovIl0sInNvdXJjZVJvb3QiOiIifQ==");
+	// removed by extract-text-webpack-plugin
 
 /***/ },
 
-/***/ 50:
-/***/ function(module, exports) {
+/***/ 18:
+16,
 
-	eval("module.exports = \"<nav class=\\\"navbar navbar-inverse navbar-fixed-top\\\">\\r\\n      <div class=\\\"container\\\">\\r\\n        <div class=\\\"navbar-header\\\">\\r\\n          <button type=\\\"button\\\" class=\\\"navbar-toggle collapsed\\\" data-toggle=\\\"collapse\\\" data-target=\\\"#navbar\\\" aria-expanded=\\\"false\\\" aria-controls=\\\"navbar\\\">\\r\\n            <span class=\\\"sr-only\\\">Toggle navigation</span>\\r\\n            <span class=\\\"icon-bar\\\"></span>\\r\\n            <span class=\\\"icon-bar\\\"></span>\\r\\n            <span class=\\\"icon-bar\\\"></span>\\r\\n          </button>\\r\\n          <a class=\\\"navbar-brand\\\" href=\\\"#\\\">Angular Webpack ES6 Bootstrap</a>\\r\\n        </div>\\r\\n        <div id=\\\"navbar\\\" class=\\\"collapse navbar-collapse\\\">\\r\\n          <ul class=\\\"nav navbar-nav\\\">\\r\\n            <li class=\\\"active\\\"><a ui-sref=\\\"home\\\">Home</a></li>\\r\\n            <li><a ui-sref=\\\"next\\\">ES6 Angular Example</a></li>\\r\\n            <li><a ui-sref=\\\"nestedview\\\">UI Router Nested View Example</a></li>\\r\\n            <li><a ui-sref=\\\"namedview\\\">UI Router Named View Example</a></li>\\r\\n            <li><a ui-sref=\\\"lazyload1\\\">With OclazyLoading</a></li>\\r\\n          </ul>\\r\\n        </div><!--/.nav-collapse -->\\r\\n      </div>\\r\\n    </nav>\\r\\n\\r\\n<h1 class='bar'>lazyload2 state</h1>\\r\\n\\r\\n<a ui-sref='lazyload1'>Go to lazyload1 state</a>\\r\\n\";//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi93ZWIvYXBwL2NsaWVudC9iYXIvYmFyLmh0bWw/M2FkNSJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSIsImZpbGUiOiI1MC5qcyIsInNvdXJjZXNDb250ZW50IjpbIm1vZHVsZS5leHBvcnRzID0gXCI8bmF2IGNsYXNzPVxcXCJuYXZiYXIgbmF2YmFyLWludmVyc2UgbmF2YmFyLWZpeGVkLXRvcFxcXCI+XFxyXFxuICAgICAgPGRpdiBjbGFzcz1cXFwiY29udGFpbmVyXFxcIj5cXHJcXG4gICAgICAgIDxkaXYgY2xhc3M9XFxcIm5hdmJhci1oZWFkZXJcXFwiPlxcclxcbiAgICAgICAgICA8YnV0dG9uIHR5cGU9XFxcImJ1dHRvblxcXCIgY2xhc3M9XFxcIm5hdmJhci10b2dnbGUgY29sbGFwc2VkXFxcIiBkYXRhLXRvZ2dsZT1cXFwiY29sbGFwc2VcXFwiIGRhdGEtdGFyZ2V0PVxcXCIjbmF2YmFyXFxcIiBhcmlhLWV4cGFuZGVkPVxcXCJmYWxzZVxcXCIgYXJpYS1jb250cm9scz1cXFwibmF2YmFyXFxcIj5cXHJcXG4gICAgICAgICAgICA8c3BhbiBjbGFzcz1cXFwic3Itb25seVxcXCI+VG9nZ2xlIG5hdmlnYXRpb248L3NwYW4+XFxyXFxuICAgICAgICAgICAgPHNwYW4gY2xhc3M9XFxcImljb24tYmFyXFxcIj48L3NwYW4+XFxyXFxuICAgICAgICAgICAgPHNwYW4gY2xhc3M9XFxcImljb24tYmFyXFxcIj48L3NwYW4+XFxyXFxuICAgICAgICAgICAgPHNwYW4gY2xhc3M9XFxcImljb24tYmFyXFxcIj48L3NwYW4+XFxyXFxuICAgICAgICAgIDwvYnV0dG9uPlxcclxcbiAgICAgICAgICA8YSBjbGFzcz1cXFwibmF2YmFyLWJyYW5kXFxcIiBocmVmPVxcXCIjXFxcIj5Bbmd1bGFyIFdlYnBhY2sgRVM2IEJvb3RzdHJhcDwvYT5cXHJcXG4gICAgICAgIDwvZGl2PlxcclxcbiAgICAgICAgPGRpdiBpZD1cXFwibmF2YmFyXFxcIiBjbGFzcz1cXFwiY29sbGFwc2UgbmF2YmFyLWNvbGxhcHNlXFxcIj5cXHJcXG4gICAgICAgICAgPHVsIGNsYXNzPVxcXCJuYXYgbmF2YmFyLW5hdlxcXCI+XFxyXFxuICAgICAgICAgICAgPGxpIGNsYXNzPVxcXCJhY3RpdmVcXFwiPjxhIHVpLXNyZWY9XFxcImhvbWVcXFwiPkhvbWU8L2E+PC9saT5cXHJcXG4gICAgICAgICAgICA8bGk+PGEgdWktc3JlZj1cXFwibmV4dFxcXCI+RVM2IEFuZ3VsYXIgRXhhbXBsZTwvYT48L2xpPlxcclxcbiAgICAgICAgICAgIDxsaT48YSB1aS1zcmVmPVxcXCJuZXN0ZWR2aWV3XFxcIj5VSSBSb3V0ZXIgTmVzdGVkIFZpZXcgRXhhbXBsZTwvYT48L2xpPlxcclxcbiAgICAgICAgICAgIDxsaT48YSB1aS1zcmVmPVxcXCJuYW1lZHZpZXdcXFwiPlVJIFJvdXRlciBOYW1lZCBWaWV3IEV4YW1wbGU8L2E+PC9saT5cXHJcXG4gICAgICAgICAgICA8bGk+PGEgdWktc3JlZj1cXFwibGF6eWxvYWQxXFxcIj5XaXRoIE9jbGF6eUxvYWRpbmc8L2E+PC9saT5cXHJcXG4gICAgICAgICAgPC91bD5cXHJcXG4gICAgICAgIDwvZGl2PjwhLS0vLm5hdi1jb2xsYXBzZSAtLT5cXHJcXG4gICAgICA8L2Rpdj5cXHJcXG4gICAgPC9uYXY+XFxyXFxuXFxyXFxuPGgxIGNsYXNzPSdiYXInPmxhenlsb2FkMiBzdGF0ZTwvaDE+XFxyXFxuXFxyXFxuPGEgdWktc3JlZj0nbGF6eWxvYWQxJz5HbyB0byBsYXp5bG9hZDEgc3RhdGU8L2E+XFxyXFxuXCI7XG5cblxuLyoqKioqKioqKioqKioqKioqXG4gKiogV0VCUEFDSyBGT09URVJcbiAqKiAuL3dlYi9hcHAvY2xpZW50L2Jhci9iYXIuaHRtbFxuICoqIG1vZHVsZSBpZCA9IDUwXG4gKiogbW9kdWxlIGNodW5rcyA9IDRcbiAqKi8iXSwic291cmNlUm9vdCI6IiJ9");
-
-/***/ },
+/***/ 21:
+16,
 
 /***/ 51:
 /***/ function(module, exports) {
 
-	eval("module.exports = \"<nav class=\\\"navbar navbar-inverse navbar-fixed-top\\\">\\r\\n      <div class=\\\"container\\\">\\r\\n        <div class=\\\"navbar-header\\\">\\r\\n          <button type=\\\"button\\\" class=\\\"navbar-toggle collapsed\\\" data-toggle=\\\"collapse\\\" data-target=\\\"#navbar\\\" aria-expanded=\\\"false\\\" aria-controls=\\\"navbar\\\">\\r\\n            <span class=\\\"sr-only\\\">Toggle navigation</span>\\r\\n            <span class=\\\"icon-bar\\\"></span>\\r\\n            <span class=\\\"icon-bar\\\"></span>\\r\\n            <span class=\\\"icon-bar\\\"></span>\\r\\n          </button>\\r\\n          <a class=\\\"navbar-brand\\\" href=\\\"#\\\">Angular Webpack ES6 Bootstrap</a>\\r\\n        </div>\\r\\n        <div id=\\\"navbar\\\" class=\\\"collapse navbar-collapse\\\">\\r\\n          <ul class=\\\"nav navbar-nav\\\">\\r\\n            <li class=\\\"active\\\"><a ui-sref=\\\"home\\\">Home</a></li>\\r\\n            <li><a ui-sref=\\\"next\\\">ES6 Angular Example</a></li>\\r\\n            <li><a ui-sref=\\\"nestedview\\\">UI Router Nested View Example</a></li>\\r\\n            <li><a ui-sref=\\\"namedview\\\">UI Router Named View Example</a></li>\\r\\n            <li><a ui-sref=\\\"lazyload1\\\">With OclazyLoading</a></li>\\r\\n          </ul>\\r\\n        </div><!--/.nav-collapse -->\\r\\n      </div>\\r\\n    </nav>\\r\\n\\r\\n<h1 class='foo'>Lazyload1 state</h1>\\r\\n\\r\\n\\r\\n<a ui-sref='lazyload2'>Go to Lazyload2 state</a>\\r\\n\";//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi93ZWIvYXBwL2NsaWVudC9mb28vZm9vLmh0bWw/YmNjYyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSIsImZpbGUiOiI1MS5qcyIsInNvdXJjZXNDb250ZW50IjpbIm1vZHVsZS5leHBvcnRzID0gXCI8bmF2IGNsYXNzPVxcXCJuYXZiYXIgbmF2YmFyLWludmVyc2UgbmF2YmFyLWZpeGVkLXRvcFxcXCI+XFxyXFxuICAgICAgPGRpdiBjbGFzcz1cXFwiY29udGFpbmVyXFxcIj5cXHJcXG4gICAgICAgIDxkaXYgY2xhc3M9XFxcIm5hdmJhci1oZWFkZXJcXFwiPlxcclxcbiAgICAgICAgICA8YnV0dG9uIHR5cGU9XFxcImJ1dHRvblxcXCIgY2xhc3M9XFxcIm5hdmJhci10b2dnbGUgY29sbGFwc2VkXFxcIiBkYXRhLXRvZ2dsZT1cXFwiY29sbGFwc2VcXFwiIGRhdGEtdGFyZ2V0PVxcXCIjbmF2YmFyXFxcIiBhcmlhLWV4cGFuZGVkPVxcXCJmYWxzZVxcXCIgYXJpYS1jb250cm9scz1cXFwibmF2YmFyXFxcIj5cXHJcXG4gICAgICAgICAgICA8c3BhbiBjbGFzcz1cXFwic3Itb25seVxcXCI+VG9nZ2xlIG5hdmlnYXRpb248L3NwYW4+XFxyXFxuICAgICAgICAgICAgPHNwYW4gY2xhc3M9XFxcImljb24tYmFyXFxcIj48L3NwYW4+XFxyXFxuICAgICAgICAgICAgPHNwYW4gY2xhc3M9XFxcImljb24tYmFyXFxcIj48L3NwYW4+XFxyXFxuICAgICAgICAgICAgPHNwYW4gY2xhc3M9XFxcImljb24tYmFyXFxcIj48L3NwYW4+XFxyXFxuICAgICAgICAgIDwvYnV0dG9uPlxcclxcbiAgICAgICAgICA8YSBjbGFzcz1cXFwibmF2YmFyLWJyYW5kXFxcIiBocmVmPVxcXCIjXFxcIj5Bbmd1bGFyIFdlYnBhY2sgRVM2IEJvb3RzdHJhcDwvYT5cXHJcXG4gICAgICAgIDwvZGl2PlxcclxcbiAgICAgICAgPGRpdiBpZD1cXFwibmF2YmFyXFxcIiBjbGFzcz1cXFwiY29sbGFwc2UgbmF2YmFyLWNvbGxhcHNlXFxcIj5cXHJcXG4gICAgICAgICAgPHVsIGNsYXNzPVxcXCJuYXYgbmF2YmFyLW5hdlxcXCI+XFxyXFxuICAgICAgICAgICAgPGxpIGNsYXNzPVxcXCJhY3RpdmVcXFwiPjxhIHVpLXNyZWY9XFxcImhvbWVcXFwiPkhvbWU8L2E+PC9saT5cXHJcXG4gICAgICAgICAgICA8bGk+PGEgdWktc3JlZj1cXFwibmV4dFxcXCI+RVM2IEFuZ3VsYXIgRXhhbXBsZTwvYT48L2xpPlxcclxcbiAgICAgICAgICAgIDxsaT48YSB1aS1zcmVmPVxcXCJuZXN0ZWR2aWV3XFxcIj5VSSBSb3V0ZXIgTmVzdGVkIFZpZXcgRXhhbXBsZTwvYT48L2xpPlxcclxcbiAgICAgICAgICAgIDxsaT48YSB1aS1zcmVmPVxcXCJuYW1lZHZpZXdcXFwiPlVJIFJvdXRlciBOYW1lZCBWaWV3IEV4YW1wbGU8L2E+PC9saT5cXHJcXG4gICAgICAgICAgICA8bGk+PGEgdWktc3JlZj1cXFwibGF6eWxvYWQxXFxcIj5XaXRoIE9jbGF6eUxvYWRpbmc8L2E+PC9saT5cXHJcXG4gICAgICAgICAgPC91bD5cXHJcXG4gICAgICAgIDwvZGl2PjwhLS0vLm5hdi1jb2xsYXBzZSAtLT5cXHJcXG4gICAgICA8L2Rpdj5cXHJcXG4gICAgPC9uYXY+XFxyXFxuXFxyXFxuPGgxIGNsYXNzPSdmb28nPkxhenlsb2FkMSBzdGF0ZTwvaDE+XFxyXFxuXFxyXFxuXFxyXFxuPGEgdWktc3JlZj0nbGF6eWxvYWQyJz5HbyB0byBMYXp5bG9hZDIgc3RhdGU8L2E+XFxyXFxuXCI7XG5cblxuLyoqKioqKioqKioqKioqKioqXG4gKiogV0VCUEFDSyBGT09URVJcbiAqKiAuL3dlYi9hcHAvY2xpZW50L2Zvby9mb28uaHRtbFxuICoqIG1vZHVsZSBpZCA9IDUxXG4gKiogbW9kdWxlIGNodW5rcyA9IDRcbiAqKi8iXSwic291cmNlUm9vdCI6IiJ9");
+	module.exports = "<nav class=\"navbar navbar-inverse navbar-fixed-top\">\r\n      <div class=\"container\">\r\n        <div class=\"navbar-header\">\r\n          <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#navbar\" aria-expanded=\"false\" aria-controls=\"navbar\">\r\n            <span class=\"sr-only\">Toggle navigation</span>\r\n            <span class=\"icon-bar\"></span>\r\n            <span class=\"icon-bar\"></span>\r\n            <span class=\"icon-bar\"></span>\r\n          </button>\r\n          <a class=\"navbar-brand\" href=\"#\">Angular Webpack ES6 Bootstrap</a>\r\n        </div>\r\n        <div id=\"navbar\" class=\"collapse navbar-collapse\">\r\n          <ul class=\"nav navbar-nav\">\r\n            <li class=\"active\"><a ui-sref=\"home\">Home</a></li>\r\n            <li><a ui-sref=\"next\">ES6 Angular Example</a></li>\r\n            <li><a ui-sref=\"nestedview\">UI Router Nested View Example</a></li>\r\n            <li><a ui-sref=\"namedview\">UI Router Named View Example</a></li>\r\n            <li><a ui-sref=\"lazyload1\">With OclazyLoading</a></li>\r\n          </ul>\r\n        </div><!--/.nav-collapse -->\r\n      </div>\r\n    </nav>\r\n\r\n<h1 class='bar'>lazyload2 state</h1>\r\n\r\n<a ui-sref='lazyload1'>Go to lazyload1 state</a>\r\n";
 
 /***/ },
 
 /***/ 52:
 /***/ function(module, exports) {
 
-	eval("module.exports = \"<nav class=\\\"navbar navbar-inverse navbar-fixed-top\\\">\\r\\n      <div class=\\\"container\\\">\\r\\n        <div class=\\\"navbar-header\\\">\\r\\n          <button type=\\\"button\\\" class=\\\"navbar-toggle collapsed\\\" data-toggle=\\\"collapse\\\" data-target=\\\"#navbar\\\" aria-expanded=\\\"false\\\" aria-controls=\\\"navbar\\\">\\r\\n            <span class=\\\"sr-only\\\">Toggle navigation</span>\\r\\n            <span class=\\\"icon-bar\\\"></span>\\r\\n            <span class=\\\"icon-bar\\\"></span>\\r\\n            <span class=\\\"icon-bar\\\"></span>\\r\\n          </button>\\r\\n          <a class=\\\"navbar-brand\\\" href=\\\"#\\\">Angular Webpack ES6 Bootstrap</a>\\r\\n        </div>\\r\\n        <div id=\\\"navbar\\\" class=\\\"collapse navbar-collapse\\\">\\r\\n          <ul class=\\\"nav navbar-nav\\\">\\r\\n            <li class=\\\"active\\\"><a ui-sref=\\\"home\\\">Home</a></li>\\r\\n            <li><a ui-sref=\\\"next\\\">ES6 Angular Example</a></li>\\r\\n            <li><a ui-sref=\\\"nestedview\\\">UI Router Nested View Example</a></li>\\r\\n            <li><a ui-sref=\\\"namedview\\\">UI Router Named View Example</a></li>\\r\\n            <li><a ui-sref=\\\"lazyload1\\\">With OclazyLoading</a></li>\\r\\n          </ul>\\r\\n        </div><!--/.nav-collapse -->\\r\\n      </div>\\r\\n    </nav>\\r\\n\\r\\n\\r\\n<div class=\\\"container\\\">\\r\\n    <div>\\r\\n        <h4>{{ctrl.controllerName}}</h4></div>\\r\\n    <div>\\r\\n        <button ng-click=\\\"ctrl.fetchData()\\\" class=\\\"btn btn-default\\\">Fetch Data</button>\\r\\n        <div>\\r\\n            <h4>Message is :{{ctrl.message}}</h4></div>\\r\\n        <app></app>\\r\\n        <h1>Modal example</h1>\\r\\n        <button ng-click=\\\"ctrl.toggleModal()\\\" class=\\\"btn btn-default\\\">Open modal</button>\\r\\n\\r\\n        <modal title=\\\"Login form\\\" visible=\\\"ctrl.showModal\\\">\\r\\n            <form role=\\\"form\\\">\\r\\n                <div class=\\\"form-group\\\">\\r\\n                    <label for=\\\"email\\\">Email address</label>\\r\\n                    <input type=\\\"email\\\" class=\\\"form-control\\\" id=\\\"email\\\" placeholder=\\\"Enter email\\\" />\\r\\n                </div>\\r\\n                <div class=\\\"form-group\\\">\\r\\n                    <label for=\\\"password\\\">Password</label>\\r\\n                    <input type=\\\"password\\\" class=\\\"form-control\\\" id=\\\"password\\\" placeholder=\\\"Password\\\" />\\r\\n                </div>\\r\\n                <button type=\\\"submit\\\" class=\\\"btn btn-default\\\">Submit</button>\\r\\n            </form>\\r\\n        </modal>\\r\\n    </div>\\r\\n</div>\\r\\n\";//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi93ZWIvYXBwL2NsaWVudC9tb2R1bGUxL2N0cmxUbXBsLmh0bWw/NDU4MSJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSw2d0NBQTZ3QyxxQkFBcUIsMEtBQTBLLGNBQWMiLCJmaWxlIjoiNTIuanMiLCJzb3VyY2VzQ29udGVudCI6WyJtb2R1bGUuZXhwb3J0cyA9IFwiPG5hdiBjbGFzcz1cXFwibmF2YmFyIG5hdmJhci1pbnZlcnNlIG5hdmJhci1maXhlZC10b3BcXFwiPlxcclxcbiAgICAgIDxkaXYgY2xhc3M9XFxcImNvbnRhaW5lclxcXCI+XFxyXFxuICAgICAgICA8ZGl2IGNsYXNzPVxcXCJuYXZiYXItaGVhZGVyXFxcIj5cXHJcXG4gICAgICAgICAgPGJ1dHRvbiB0eXBlPVxcXCJidXR0b25cXFwiIGNsYXNzPVxcXCJuYXZiYXItdG9nZ2xlIGNvbGxhcHNlZFxcXCIgZGF0YS10b2dnbGU9XFxcImNvbGxhcHNlXFxcIiBkYXRhLXRhcmdldD1cXFwiI25hdmJhclxcXCIgYXJpYS1leHBhbmRlZD1cXFwiZmFsc2VcXFwiIGFyaWEtY29udHJvbHM9XFxcIm5hdmJhclxcXCI+XFxyXFxuICAgICAgICAgICAgPHNwYW4gY2xhc3M9XFxcInNyLW9ubHlcXFwiPlRvZ2dsZSBuYXZpZ2F0aW9uPC9zcGFuPlxcclxcbiAgICAgICAgICAgIDxzcGFuIGNsYXNzPVxcXCJpY29uLWJhclxcXCI+PC9zcGFuPlxcclxcbiAgICAgICAgICAgIDxzcGFuIGNsYXNzPVxcXCJpY29uLWJhclxcXCI+PC9zcGFuPlxcclxcbiAgICAgICAgICAgIDxzcGFuIGNsYXNzPVxcXCJpY29uLWJhclxcXCI+PC9zcGFuPlxcclxcbiAgICAgICAgICA8L2J1dHRvbj5cXHJcXG4gICAgICAgICAgPGEgY2xhc3M9XFxcIm5hdmJhci1icmFuZFxcXCIgaHJlZj1cXFwiI1xcXCI+QW5ndWxhciBXZWJwYWNrIEVTNiBCb290c3RyYXA8L2E+XFxyXFxuICAgICAgICA8L2Rpdj5cXHJcXG4gICAgICAgIDxkaXYgaWQ9XFxcIm5hdmJhclxcXCIgY2xhc3M9XFxcImNvbGxhcHNlIG5hdmJhci1jb2xsYXBzZVxcXCI+XFxyXFxuICAgICAgICAgIDx1bCBjbGFzcz1cXFwibmF2IG5hdmJhci1uYXZcXFwiPlxcclxcbiAgICAgICAgICAgIDxsaSBjbGFzcz1cXFwiYWN0aXZlXFxcIj48YSB1aS1zcmVmPVxcXCJob21lXFxcIj5Ib21lPC9hPjwvbGk+XFxyXFxuICAgICAgICAgICAgPGxpPjxhIHVpLXNyZWY9XFxcIm5leHRcXFwiPkVTNiBBbmd1bGFyIEV4YW1wbGU8L2E+PC9saT5cXHJcXG4gICAgICAgICAgICA8bGk+PGEgdWktc3JlZj1cXFwibmVzdGVkdmlld1xcXCI+VUkgUm91dGVyIE5lc3RlZCBWaWV3IEV4YW1wbGU8L2E+PC9saT5cXHJcXG4gICAgICAgICAgICA8bGk+PGEgdWktc3JlZj1cXFwibmFtZWR2aWV3XFxcIj5VSSBSb3V0ZXIgTmFtZWQgVmlldyBFeGFtcGxlPC9hPjwvbGk+XFxyXFxuICAgICAgICAgICAgPGxpPjxhIHVpLXNyZWY9XFxcImxhenlsb2FkMVxcXCI+V2l0aCBPY2xhenlMb2FkaW5nPC9hPjwvbGk+XFxyXFxuICAgICAgICAgIDwvdWw+XFxyXFxuICAgICAgICA8L2Rpdj48IS0tLy5uYXYtY29sbGFwc2UgLS0+XFxyXFxuICAgICAgPC9kaXY+XFxyXFxuICAgIDwvbmF2PlxcclxcblxcclxcblxcclxcbjxkaXYgY2xhc3M9XFxcImNvbnRhaW5lclxcXCI+XFxyXFxuICAgIDxkaXY+XFxyXFxuICAgICAgICA8aDQ+e3tjdHJsLmNvbnRyb2xsZXJOYW1lfX08L2g0PjwvZGl2PlxcclxcbiAgICA8ZGl2PlxcclxcbiAgICAgICAgPGJ1dHRvbiBuZy1jbGljaz1cXFwiY3RybC5mZXRjaERhdGEoKVxcXCIgY2xhc3M9XFxcImJ0biBidG4tZGVmYXVsdFxcXCI+RmV0Y2ggRGF0YTwvYnV0dG9uPlxcclxcbiAgICAgICAgPGRpdj5cXHJcXG4gICAgICAgICAgICA8aDQ+TWVzc2FnZSBpcyA6e3tjdHJsLm1lc3NhZ2V9fTwvaDQ+PC9kaXY+XFxyXFxuICAgICAgICA8YXBwPjwvYXBwPlxcclxcbiAgICAgICAgPGgxPk1vZGFsIGV4YW1wbGU8L2gxPlxcclxcbiAgICAgICAgPGJ1dHRvbiBuZy1jbGljaz1cXFwiY3RybC50b2dnbGVNb2RhbCgpXFxcIiBjbGFzcz1cXFwiYnRuIGJ0bi1kZWZhdWx0XFxcIj5PcGVuIG1vZGFsPC9idXR0b24+XFxyXFxuXFxyXFxuICAgICAgICA8bW9kYWwgdGl0bGU9XFxcIkxvZ2luIGZvcm1cXFwiIHZpc2libGU9XFxcImN0cmwuc2hvd01vZGFsXFxcIj5cXHJcXG4gICAgICAgICAgICA8Zm9ybSByb2xlPVxcXCJmb3JtXFxcIj5cXHJcXG4gICAgICAgICAgICAgICAgPGRpdiBjbGFzcz1cXFwiZm9ybS1ncm91cFxcXCI+XFxyXFxuICAgICAgICAgICAgICAgICAgICA8bGFiZWwgZm9yPVxcXCJlbWFpbFxcXCI+RW1haWwgYWRkcmVzczwvbGFiZWw+XFxyXFxuICAgICAgICAgICAgICAgICAgICA8aW5wdXQgdHlwZT1cXFwiZW1haWxcXFwiIGNsYXNzPVxcXCJmb3JtLWNvbnRyb2xcXFwiIGlkPVxcXCJlbWFpbFxcXCIgcGxhY2Vob2xkZXI9XFxcIkVudGVyIGVtYWlsXFxcIiAvPlxcclxcbiAgICAgICAgICAgICAgICA8L2Rpdj5cXHJcXG4gICAgICAgICAgICAgICAgPGRpdiBjbGFzcz1cXFwiZm9ybS1ncm91cFxcXCI+XFxyXFxuICAgICAgICAgICAgICAgICAgICA8bGFiZWwgZm9yPVxcXCJwYXNzd29yZFxcXCI+UGFzc3dvcmQ8L2xhYmVsPlxcclxcbiAgICAgICAgICAgICAgICAgICAgPGlucHV0IHR5cGU9XFxcInBhc3N3b3JkXFxcIiBjbGFzcz1cXFwiZm9ybS1jb250cm9sXFxcIiBpZD1cXFwicGFzc3dvcmRcXFwiIHBsYWNlaG9sZGVyPVxcXCJQYXNzd29yZFxcXCIgLz5cXHJcXG4gICAgICAgICAgICAgICAgPC9kaXY+XFxyXFxuICAgICAgICAgICAgICAgIDxidXR0b24gdHlwZT1cXFwic3VibWl0XFxcIiBjbGFzcz1cXFwiYnRuIGJ0bi1kZWZhdWx0XFxcIj5TdWJtaXQ8L2J1dHRvbj5cXHJcXG4gICAgICAgICAgICA8L2Zvcm0+XFxyXFxuICAgICAgICA8L21vZGFsPlxcclxcbiAgICA8L2Rpdj5cXHJcXG48L2Rpdj5cXHJcXG5cIjtcblxuXG4vKioqKioqKioqKioqKioqKipcbiAqKiBXRUJQQUNLIEZPT1RFUlxuICoqIC4vd2ViL2FwcC9jbGllbnQvbW9kdWxlMS9jdHJsVG1wbC5odG1sXG4gKiogbW9kdWxlIGlkID0gNTJcbiAqKiBtb2R1bGUgY2h1bmtzID0gNFxuICoqLyJdLCJzb3VyY2VSb290IjoiIn0=");
+	module.exports = "<nav class=\"navbar navbar-inverse navbar-fixed-top\">\r\n      <div class=\"container\">\r\n        <div class=\"navbar-header\">\r\n          <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#navbar\" aria-expanded=\"false\" aria-controls=\"navbar\">\r\n            <span class=\"sr-only\">Toggle navigation</span>\r\n            <span class=\"icon-bar\"></span>\r\n            <span class=\"icon-bar\"></span>\r\n            <span class=\"icon-bar\"></span>\r\n          </button>\r\n          <a class=\"navbar-brand\" href=\"#\">Angular Webpack ES6 Bootstrap</a>\r\n        </div>\r\n        <div id=\"navbar\" class=\"collapse navbar-collapse\">\r\n          <ul class=\"nav navbar-nav\">\r\n            <li class=\"active\"><a ui-sref=\"home\">Home</a></li>\r\n            <li><a ui-sref=\"next\">ES6 Angular Example</a></li>\r\n            <li><a ui-sref=\"nestedview\">UI Router Nested View Example</a></li>\r\n            <li><a ui-sref=\"namedview\">UI Router Named View Example</a></li>\r\n            <li><a ui-sref=\"lazyload1\">With OclazyLoading</a></li>\r\n          </ul>\r\n        </div><!--/.nav-collapse -->\r\n      </div>\r\n    </nav>\r\n\r\n<h1 class='foo'>Lazyload1 state</h1>\r\n\r\n\r\n<a ui-sref='lazyload2'>Go to Lazyload2 state</a>\r\n";
 
 /***/ },
 
-/***/ 57:
+/***/ 53:
+/***/ function(module, exports) {
+
+	module.exports = "<nav class=\"navbar navbar-inverse navbar-fixed-top\">\r\n      <div class=\"container\">\r\n        <div class=\"navbar-header\">\r\n          <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#navbar\" aria-expanded=\"false\" aria-controls=\"navbar\">\r\n            <span class=\"sr-only\">Toggle navigation</span>\r\n            <span class=\"icon-bar\"></span>\r\n            <span class=\"icon-bar\"></span>\r\n            <span class=\"icon-bar\"></span>\r\n          </button>\r\n          <a class=\"navbar-brand\" href=\"#\">Angular Webpack ES6 Bootstrap</a>\r\n        </div>\r\n        <div id=\"navbar\" class=\"collapse navbar-collapse\">\r\n          <ul class=\"nav navbar-nav\">\r\n            <li class=\"active\"><a ui-sref=\"home\">Home</a></li>\r\n            <li><a ui-sref=\"next\">ES6 Angular Example</a></li>\r\n            <li><a ui-sref=\"nestedview\">UI Router Nested View Example</a></li>\r\n            <li><a ui-sref=\"namedview\">UI Router Named View Example</a></li>\r\n            <li><a ui-sref=\"lazyload1\">With OclazyLoading</a></li>\r\n          </ul>\r\n        </div><!--/.nav-collapse -->\r\n      </div>\r\n    </nav>\r\n\r\n\r\n<div class=\"container\">\r\n    <div>\r\n        <h4>{{ctrl.controllerName}}</h4></div>\r\n    <div>\r\n        <button ng-click=\"ctrl.fetchData()\" class=\"btn btn-default\">Fetch Data</button>\r\n        <div>\r\n            <h4>Message is :{{ctrl.message}}</h4></div>\r\n        <app></app>\r\n        <h1>Modal example</h1>\r\n        <button ng-click=\"ctrl.toggleModal()\" class=\"btn btn-default\">Open modal</button>\r\n\r\n        <modal title=\"Login form\" visible=\"ctrl.showModal\">\r\n            <form role=\"form\">\r\n                <div class=\"form-group\">\r\n                    <label for=\"email\">Email address</label>\r\n                    <input type=\"email\" class=\"form-control\" id=\"email\" placeholder=\"Enter email\" />\r\n                </div>\r\n                <div class=\"form-group\">\r\n                    <label for=\"password\">Password</label>\r\n                    <input type=\"password\" class=\"form-control\" id=\"password\" placeholder=\"Password\" />\r\n                </div>\r\n                <button type=\"submit\" class=\"btn btn-default\">Submit</button>\r\n            </form>\r\n        </modal>\r\n    </div>\r\n</div>\r\n";
+
+/***/ },
+
+/***/ 58:
 /***/ function(module, exports, __webpack_require__) {
 
-	eval("'use strict';\n\n__webpack_require__(17);\n\nmodule.exports = {};//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi93ZWIvYXBwL2NsaWVudC9jb3JlL2luZGV4LmpzPzNkMjciXSwibmFtZXMiOlsicmVxdWlyZSIsIm1vZHVsZSIsImV4cG9ydHMiXSwibWFwcGluZ3MiOiI7O0FBQUEsbUJBQUFBLENBQVEsRUFBUjs7QUFFQUMsT0FBT0MsT0FBUCxHQUFpQixFQUFqQiIsImZpbGUiOiI1Ny5qcyIsInNvdXJjZXNDb250ZW50IjpbInJlcXVpcmUoJy4vbWFpbi5zY3NzJyk7XHJcblxyXG5tb2R1bGUuZXhwb3J0cyA9IHt9O1xuXG5cbi8qKiBXRUJQQUNLIEZPT1RFUiAqKlxuICoqIC4vd2ViL2FwcC9jbGllbnQvY29yZS9pbmRleC5qc1xuICoqLyJdLCJzb3VyY2VSb290IjoiIn0=");
+	'use strict';
+	
+	__webpack_require__(18);
+	
+	module.exports = {};
 
 /***/ }
 
 });
+//# sourceMappingURL=app.js.map

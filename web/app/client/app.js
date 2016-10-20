@@ -1,8 +1,8 @@
 import angular from 'angular';
 import uirouter from 'angular-ui-router';
-import oclazyload from 'oclazyload';
-import 'bootstrap/dist/css/bootstrap.css';
-import 'bootstrap/dist/js/bootstrap.js';
+import oclazyload from 'oclazyloads';
+import 'bootstrapCSS';
+import 'bootstrapJS';
 //import module1 from './module1/module.js'
 import template1 from './module1/ctrlTmpl.html';
 import './app.scss';
@@ -36,7 +36,7 @@ var configs = function($stateProvider, $urlRouterProvider, $locationProvider) {
                     });
 
                     deferred.resolve(mod.default.controller);
-                });
+                },'module1');//naming chunkfiles 
 
                 return deferred.promise;
             }]
@@ -90,7 +90,7 @@ var configs = function($stateProvider, $urlRouterProvider, $locationProvider) {
                     });
 
                     deferred.resolve(mod.controller);
-                });
+                },'foo');
 
                 return deferred.promise;
             }]
@@ -109,7 +109,7 @@ var configs = function($stateProvider, $urlRouterProvider, $locationProvider) {
                     });
 
                     deferred.resolve(mod.controller);
-                });
+                },'bar');
 
                 return deferred.promise;
             }]
