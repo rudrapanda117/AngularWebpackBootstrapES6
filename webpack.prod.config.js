@@ -40,8 +40,14 @@ module.exports = {
             test: /\.scss$/,
             loader: /*"style!css!sass"*/ extractAppCss.extract('style-loader', 'css-loader', 'sass-loader')
         }, {
-            test: /\.(png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot)$/,
+            test: /\.(png)$/,
+            loaders: ['file-loader?name=/img/png/[name].[ext]']
+        },{
+            test: /\.(svg|woff|woff2|ttf|eot)$/,
             loaders: ['file-loader?name=/img/[name].[ext]']
+        },
+		{
+             test: /\.(jpg)$/, loader: 'url-loader?limit=8192' 
         }]
     },
     plugins: [
