@@ -9,7 +9,7 @@ var webpackdevserver = new webpackDevServer(webpack(config),{
   publicPath:config.output.publicPath,
   inline:true,
   hot:true,
-  historyApiFallback:true,
+  historyApiFallback:false,
   proxy:{
     "*":"http://localhost:3000"
   }

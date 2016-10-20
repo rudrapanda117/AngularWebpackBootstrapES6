@@ -1,6 +1,6 @@
 export default class ExampleController {
     constructor($http) {
-        this.controllerName = 'First Controller';
+        this.controllerName = 'Message form First Controller';
         this.showModal = false;
         this.$http=$http;
     }
