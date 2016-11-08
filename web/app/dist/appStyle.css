@@ -1,17 +1,17 @@
 /* styles in src/style directory are applied to the whole page */
 .bodyclass {
   background: #0147A7;
-    padding-top: 50px;
-}
+  padding-top: 50px; }
 
 a {
-  color: purple;
-}
+  color: purple; }
+
 .starter-template {
   padding: 40px 15px;
-  text-align: center;
-}
+  text-align: center; }
+
+body {
+  font: 100% Helvetica, sans-serif;
+  color: #333; }
 a {
-  cursor: pointer;
-}
-/*# sourceMappingURL=appStyle.css.map*/
+  cursor: pointer; }

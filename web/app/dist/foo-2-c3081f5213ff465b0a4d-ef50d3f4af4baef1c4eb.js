@@ -1,27 +1,27 @@
-webpackJsonp([3,5],{
+webpackJsonp([2,5],{
 
-/***/ 13:
+/***/ 19:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(1)();
 	// imports
-	
-	
+
+
 	// module
-	exports.push([module.id, "h1.bar {\n  color: blue;\n}", ""]);
-	
+	exports.push([module.id, "h1.foo {\n  color: red; }\n", ""]);
+
 	// exports
 
 
 /***/ },
 
-/***/ 17:
+/***/ 24:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
-	
+
 	// load the styles
-	var content = __webpack_require__(13);
+	var content = __webpack_require__(19);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(3)(content, {});
@@ -30,8 +30,8 @@ webpackJsonp([3,5],{
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./bar.scss", function() {
-				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./bar.scss");
+			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/sass-loader/index.js!./foo.scss", function() {
+				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/sass-loader/index.js!./foo.scss");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -42,35 +42,35 @@ webpackJsonp([3,5],{
 
 /***/ },
 
-/***/ 56:
+/***/ 65:
 /***/ function(module, exports) {
 
-	"use strict";
-	
-	module.exports = ["$scope", function ($scope) {
-	  "ngInject";
-	
-	  console.log('bar controller');
-	}];
+	'use strict';
+
+	/*@ngInject*/
+	foocontroller.$inject = ["$scope"];
+	function foocontroller($scope) {
+	  console.log('foo controller');
+	}
+	module.exports = foocontroller;
 
 /***/ },
 
-/***/ 57:
+/***/ 66:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
-	
-	var barController = __webpack_require__(56);
-	
-	__webpack_require__(17);
-	
-	var mod = module.exports = angular.module('bar', []);
-	
-	mod.controller('BarController', barController);
-	
+
+	var fooController = __webpack_require__(65);
+
+	__webpack_require__(24);
+
+	var mod = angular.module('foo', []);
+
+	mod.controller('FooController', ['$scope', fooController]);
+
 	module.exports = mod;
 
 /***/ }
 
 });
-//# sourceMappingURL=bar-3-4366d3dbf67c53ed2299-75a0d3f571230b93257d.js.map

@@ -9,11 +9,13 @@
     "build:prod": "rimraf web/app/dist && webpack --config ./webpack.prod.config.js --progress --profile --display-modules",
     "devserver": "nodemon ./bin/devServer",
     "webpackhmr": "node ./bin/webpack",
-    "start:dev": "npm run devserver & npm run webpackhmr"
-
+    "start:dev": "run-p devserver webpackhmr"
   },
   "dependencies": {
     "angular": "^1.5.8",
+    "angular-animate": "^1.5.8",
+    "angular-touch": "^1.5.8",
+    "angular-ui-grid": "^3.2.9",
     "angular-ui-router": "^0.3.1",
     "body-parser": "~1.15.1",
     "bootstrap": "^3.3.7",
@@ -45,8 +47,11 @@
     "http-proxy": "^1.15.1",
     "ng-annotate-loader": "^0.2.0",
     "node-sass": "^3.10.1",
+    "npm-run-all": "^3.1.1",
     "rimraf": "^2.5.4",
     "sass-loader": "^4.0.2",
+    "sass-variable-loader": "0.0.4",
+    "sass-variables-loader": "^0.1.3",
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",
     "webpack": "^1.13.2",

@@ -11,7 +11,7 @@ var webpackdevserver = new webpackDevServer(webpack(config),{
   hot:true,
   historyApiFallback:false,
   proxy:{
-    "*":"http://localhost:3000"
+    "*":"http://localhost:3000/"
   }
 })
 

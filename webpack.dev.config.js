@@ -55,12 +55,13 @@ module.exports = {
             test: /\.html$/,
             loader: 'html-loader'
         }, {
-            test: /[\/\\]bootstrap[\/\\]*\.css$/,
+          /*test: /[\/\\]bootstrap[\/\\]\.css$/,*/
+            test: /\.css$/,
             loader: /*"style!css"*/ extractBootStrapCss.extract('style-loader', 'css-loader')
 
         }, {
             test: /\.scss$/,
-            loader: /*"style!css!sass"*/ extractAppCss.extract('style-loader', 'css-loader', 'sass-loader')
+            loader: /*"style!css!sass"*/ extractAppCss.extract('style-loader', ['css-loader', 'sass-loader'])
         }, {
             test: /\.(png)$/,
             loaders: ['file-loader?name=/img/png/[name].[ext]']
@@ -81,10 +82,12 @@ module.exports = {
             template: 'web/app/client/index.html',
             inject: 'body',
             hash: true,
-            filename: 'index.html'
+            filename: 'index.html',
+            chunksSortMode:'none'
         }),
-        extractAppCss,
+
         extractBootStrapCss,
+        extractAppCss,
         new webpack.optimize.OccurenceOrderPlugin(),
         new webpack.NoErrorsPlugin(),
 

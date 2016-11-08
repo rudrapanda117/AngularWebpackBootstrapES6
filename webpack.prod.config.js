@@ -12,7 +12,7 @@ var extractBootStrapCss = new ExtractTextPlugin('vendorStyle.css', {
 });
 
 module.exports = {
-    devtool: 'source-map',
+    /*devtool: 'source-map',*/
     entry: {
         app: path.join(__dirname, '/web/app/client/app.js'),
         vendor: ['jquery', 'angular', 'angular-ui-router', 'oclazyloads', 'bootstrapJS']
@@ -51,12 +51,13 @@ module.exports = {
             test: /\.html$/,
             loader: 'html-loader'
         }, {
-            test: /[\/\\]bootstrap[\/\\]*\.css$/,
+            /*test: /[\/\\]bootstrap[\/\\]\.css$/,*/
+            test: /\.css$/,
             loader: /*"style!css"*/ extractBootStrapCss.extract('style-loader', 'css-loader')
 
         }, {
             test: /\.scss$/,
-            loader: /*"style!css!sass"*/ extractAppCss.extract('style-loader', 'css-loader', 'sass-loader')
+            loader: /*"style!css!sass"*/ extractAppCss.extract('style-loader',['css-loader', 'sass-loader'])
         }, {
             test: /\.(png)$/,
             loaders: ['file-loader?name=/img/png/[name].[ext]']

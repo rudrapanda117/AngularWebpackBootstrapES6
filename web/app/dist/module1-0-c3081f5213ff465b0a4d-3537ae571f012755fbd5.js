@@ -30,20 +30,7 @@ webpackJsonp([0,5],[
 /* 12 */,
 /* 13 */,
 /* 14 */,
-/* 15 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(1)();
-	// imports
-	
-	
-	// module
-	exports.push([module.id, ".star {\n  color:red;\n}\n", ""]);
-	
-	// exports
-
-
-/***/ },
+/* 15 */,
 /* 16 */,
 /* 17 */,
 /* 18 */,
@@ -51,10 +38,28 @@ webpackJsonp([0,5],[
 /* 20 */
 /***/ function(module, exports, __webpack_require__) {
 
+	exports = module.exports = __webpack_require__(1)();
+	// imports
+
+
+	// module
+	exports.push([module.id, ".star {\n  color: red; }\n", ""]);
+
+	// exports
+
+
+/***/ },
+/* 21 */,
+/* 22 */,
+/* 23 */,
+/* 24 */,
+/* 25 */
+/***/ function(module, exports, __webpack_require__) {
+
 	// style-loader: Adds some css to the DOM by adding a <style> tag
-	
+
 	// load the styles
-	var content = __webpack_require__(15);
+	var content = __webpack_require__(20);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(3)(content, {});
@@ -63,8 +68,8 @@ webpackJsonp([0,5],[
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./directive.scss", function() {
-				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./directive.scss");
+			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/sass-loader/index.js!./directive.scss", function() {
+				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/sass-loader/index.js!./directive.scss");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -74,234 +79,235 @@ webpackJsonp([0,5],[
 	}
 
 /***/ },
-/* 21 */,
-/* 22 */
+/* 26 */,
+/* 27 */,
+/* 28 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "/img/png/Home-icon0.png";
 
 /***/ },
-/* 23 */
+/* 29 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "/img/png/Home-icon1.png";
 
 /***/ },
-/* 24 */
+/* 30 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "/img/png/Home-icon11.png";
 
 /***/ },
-/* 25 */
+/* 31 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "/img/png/Home-icon12.png";
 
 /***/ },
-/* 26 */
+/* 32 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "/img/png/Home-icon13.png";
 
 /***/ },
-/* 27 */
+/* 33 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "/img/png/Home-icon14.png";
 
 /***/ },
-/* 28 */
+/* 34 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "/img/png/Home-icon15.png";
 
 /***/ },
-/* 29 */
+/* 35 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "/img/png/Home-icon16.png";
 
 /***/ },
-/* 30 */
+/* 36 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "/img/png/Home-icon17.png";
 
 /***/ },
-/* 31 */
+/* 37 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "/img/png/Home-icon18.png";
 
 /***/ },
-/* 32 */
+/* 38 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "/img/png/Home-icon19.png";
 
 /***/ },
-/* 33 */
+/* 39 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "/img/png/Home-icon2.png";
 
 /***/ },
-/* 34 */
+/* 40 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "/img/png/Home-icon21.png";
 
 /***/ },
-/* 35 */
+/* 41 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "/img/png/Home-icon22.png";
 
 /***/ },
-/* 36 */
+/* 42 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "/img/png/Home-icon23.png";
 
 /***/ },
-/* 37 */
+/* 43 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "/img/png/Home-icon24.png";
 
 /***/ },
-/* 38 */
+/* 44 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "/img/png/Home-icon25.png";
 
 /***/ },
-/* 39 */
+/* 45 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "/img/png/Home-icon26.png";
 
 /***/ },
-/* 40 */
+/* 46 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "/img/png/Home-icon27.png";
 
 /***/ },
-/* 41 */
+/* 47 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "/img/png/Home-icon28.png";
 
 /***/ },
-/* 42 */
+/* 48 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "/img/png/Home-icon29.png";
 
 /***/ },
-/* 43 */
+/* 49 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "/img/png/Home-icon3.png";
 
 /***/ },
-/* 44 */
+/* 50 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "/img/png/Home-icon30.png";
 
 /***/ },
-/* 45 */
+/* 51 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "/img/png/Home-icon4.png";
 
 /***/ },
-/* 46 */
+/* 52 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "/img/png/Home-icon5.png";
 
 /***/ },
-/* 47 */
+/* 53 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "/img/png/Home-icon6.png";
 
 /***/ },
-/* 48 */
+/* 54 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "/img/png/Home-icon7.png";
 
 /***/ },
-/* 49 */
+/* 55 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "/img/png/Home-icon8.png";
 
 /***/ },
-/* 50 */
+/* 56 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "/img/png/Home-icon9.png";
 
 /***/ },
-/* 51 */,
-/* 52 */,
-/* 53 */,
-/* 54 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = "<div>\n    <h1 class=\"star\">Hello from Angular !</h1>\n    </br>\n    {{dire.samplename}}\n    </br>\n\n\n\n    <a ng-href=\"{{dire.url}}\">Webpack Angular Starter</a>\n    <hr>\n    <!-- Images (and assets) are parsed and loaded from within the public directory -->\n\n    <div style=\"float: left;text-align:center;\">\n        <table>\n            <tr>\n                <td> <img src=\"" + __webpack_require__(22) + "\"></td>\n                <td><img src=\"" + __webpack_require__(23) + "\"></td>\n                <td><img src=\"" + __webpack_require__(33) + "\"></td>\n                <td> <img src=\"" + __webpack_require__(43) + "\"></td>\n                <td><img src=\"" + __webpack_require__(45) + "\"></td>\n                <td><img src=\"" + __webpack_require__(46) + "\"></td>\n                <td> <img src=\"" + __webpack_require__(47) + "\"></td>\n                <td><img src=\"" + __webpack_require__(48) + "\"></td>\n                <td><img src=\"" + __webpack_require__(49) + "\"></td>\n                <td> <img src=\"" + __webpack_require__(50) + "\"></td>\n                <td><img src=\"" + __webpack_require__(7) + "\"></td>\n            </tr>\n            <tr>\n                <td><img src=\"" + __webpack_require__(7) + "\"></td>\n                <td><img src=\"" + __webpack_require__(24) + "\"></td>\n                <td><img src=\"" + __webpack_require__(25) + "\"></td>\n                <td><img src=\"" + __webpack_require__(26) + "\"></td>\n                <td><img src=\"" + __webpack_require__(27) + "\"></td>\n                <td><img src=\"" + __webpack_require__(28) + "\"></td>\n                <td><img src=\"" + __webpack_require__(29) + "\"></td>\n                <td><img src=\"" + __webpack_require__(30) + "\"></td>\n                <td><img src=\"" + __webpack_require__(31) + "\"></td>\n                <td><img src=\"" + __webpack_require__(32) + "\"></td>\n                <td><img src=\"" + __webpack_require__(8) + "\"></td>\n            </tr>\n            <tr>\n                <td><img src=\"" + __webpack_require__(8) + "\"></td>\n                <td><img src=\"" + __webpack_require__(34) + "\"></td>\n                <td><img src=\"" + __webpack_require__(35) + "\"></td>\n                <td><img src=\"" + __webpack_require__(36) + "\"></td>\n                <td><img src=\"" + __webpack_require__(37) + "\"></td>\n                <td><img src=\"" + __webpack_require__(38) + "\"></td>\n                <td><img src=\"" + __webpack_require__(39) + "\"></td>\n                <td><img src=\"" + __webpack_require__(40) + "\"></td>\n                <td><img src=\"" + __webpack_require__(41) + "\"></td>\n                <td><img src=\"" + __webpack_require__(42) + "\"></td>\n                <td><img src=\"" + __webpack_require__(44) + "\"></td>\n            </tr>\n\n        </table>\n        <h3>External image is downloaded.</h3>\n    </div>\n\n    <div style=\"float: left;text-align:center;\">\n        <table>\n            <tr>\n                <td> <img src=\"" + __webpack_require__(66) + "\"></td>\n                <td> <img src=\"" + __webpack_require__(67) + "\"></td>\n                <td> <img src=\"" + __webpack_require__(77) + "\"></td>\n                <td> <img src=\"" + __webpack_require__(87) + "\"></td>\n                <td> <img src=\"" + __webpack_require__(89) + "\"></td>\n                <td> <img src=\"" + __webpack_require__(90) + "\"></td>\n                <td> <img src=\"" + __webpack_require__(91) + "\"></td>\n                <td> <img src=\"" + __webpack_require__(92) + "\"></td>\n                <td> <img src=\"" + __webpack_require__(93) + "\"></td>\n                <td> <img src=\"" + __webpack_require__(94) + "\"></td>\n                <td> <img src=\"" + __webpack_require__(10) + "\"></td>\n            </tr>\n            <tr>\n                <td> <img src=\"" + __webpack_require__(10) + "\"></td>\n                <td> <img src=\"" + __webpack_require__(68) + "\"></td>\n                <td> <img src=\"" + __webpack_require__(69) + "\"></td>\n                <td> <img src=\"" + __webpack_require__(70) + "\"></td>\n                <td> <img src=\"" + __webpack_require__(71) + "\"></td>\n                <td> <img src=\"" + __webpack_require__(72) + "\"></td>\n                <td> <img src=\"" + __webpack_require__(73) + "\"></td>\n                <td> <img src=\"" + __webpack_require__(74) + "\"></td>\n                <td> <img src=\"" + __webpack_require__(75) + "\"></td>\n                <td> <img src=\"" + __webpack_require__(76) + "\"></td>\n                <td> <img src=\"" + __webpack_require__(11) + "\"></td>\n            </tr>\n            <tr>\n                <td> <img src=\"" + __webpack_require__(11) + "\"></td>\n                <td> <img src=\"" + __webpack_require__(78) + "\"></td>\n                <td> <img src=\"" + __webpack_require__(79) + "\"></td>\n                <td> <img src=\"" + __webpack_require__(80) + "\"></td>\n                <td> <img src=\"" + __webpack_require__(81) + "\"></td>\n                <td> <img src=\"" + __webpack_require__(82) + "\"></td>\n                <td> <img src=\"" + __webpack_require__(83) + "\"></td>\n                <td> <img src=\"" + __webpack_require__(84) + "\"></td>\n                <td> <img src=\"" + __webpack_require__(85) + "\"></td>\n                <td> <img src=\"" + __webpack_require__(86) + "\"></td>\n                <td> <img src=\"" + __webpack_require__(88) + "\"></td>\n            </tr>\n\n        </table>\n        <h3>Internal image is inlined.</h3>\n    </div>\n\n\n\n</div>\n";
-
-/***/ },
-/* 55 */
-/***/ function(module, exports) {
-
-	module.exports = "<div class=\"modal fade\">\n    <div class=\"modal-dialog\">\n      <div class=\"modal-content\">\n        <div class=\"modal-header\">\n          <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-hidden=\"true\">&times;</button>\n          <h4 class=\"modal-title\">{{ title }}</h4>\n          <h4 class=\"modal-title\">{{ mod.headLine }}</h4>\n        </div>\n        <div class=\"modal-body\" ng-transclude></div>\n      </div>\n    </div>\n  </div>\n";
-
-/***/ },
-/* 56 */,
 /* 57 */,
 /* 58 */,
 /* 59 */,
-/* 60 */,
+/* 60 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = "<div>\r\n    <h1 class=\"star\">Hello from Angular !</h1>\r\n    </br>\r\n    {{dire.samplename}}\r\n    </br>\r\n\r\n\r\n\r\n    <a ng-href=\"{{dire.url}}\">Webpack Angular Starter</a>\r\n    <hr>\r\n    <!-- Images (and assets) are parsed and loaded from within the public directory -->\r\n\r\n    <div style=\"float: left;text-align:center;\">\r\n        <table>\r\n            <tr>\r\n                <td> <img src=\"" + __webpack_require__(28) + "\"></td>\r\n                <td><img src=\"" + __webpack_require__(29) + "\"></td>\r\n                <td><img src=\"" + __webpack_require__(39) + "\"></td>\r\n                <td> <img src=\"" + __webpack_require__(49) + "\"></td>\r\n                <td><img src=\"" + __webpack_require__(51) + "\"></td>\r\n                <td><img src=\"" + __webpack_require__(52) + "\"></td>\r\n                <td> <img src=\"" + __webpack_require__(53) + "\"></td>\r\n                <td><img src=\"" + __webpack_require__(54) + "\"></td>\r\n                <td><img src=\"" + __webpack_require__(55) + "\"></td>\r\n                <td> <img src=\"" + __webpack_require__(56) + "\"></td>\r\n                <td><img src=\"" + __webpack_require__(7) + "\"></td>\r\n            </tr>\r\n            <tr>\r\n                <td><img src=\"" + __webpack_require__(7) + "\"></td>\r\n                <td><img src=\"" + __webpack_require__(30) + "\"></td>\r\n                <td><img src=\"" + __webpack_require__(31) + "\"></td>\r\n                <td><img src=\"" + __webpack_require__(32) + "\"></td>\r\n                <td><img src=\"" + __webpack_require__(33) + "\"></td>\r\n                <td><img src=\"" + __webpack_require__(34) + "\"></td>\r\n                <td><img src=\"" + __webpack_require__(35) + "\"></td>\r\n                <td><img src=\"" + __webpack_require__(36) + "\"></td>\r\n                <td><img src=\"" + __webpack_require__(37) + "\"></td>\r\n                <td><img src=\"" + __webpack_require__(38) + "\"></td>\r\n                <td><img src=\"" + __webpack_require__(8) + "\"></td>\r\n            </tr>\r\n            <tr>\r\n                <td><img src=\"" + __webpack_require__(8) + "\"></td>\r\n                <td><img src=\"" + __webpack_require__(40) + "\"></td>\r\n                <td><img src=\"" + __webpack_require__(41) + "\"></td>\r\n                <td><img src=\"" + __webpack_require__(42) + "\"></td>\r\n                <td><img src=\"" + __webpack_require__(43) + "\"></td>\r\n                <td><img src=\"" + __webpack_require__(44) + "\"></td>\r\n                <td><img src=\"" + __webpack_require__(45) + "\"></td>\r\n                <td><img src=\"" + __webpack_require__(46) + "\"></td>\r\n                <td><img src=\"" + __webpack_require__(47) + "\"></td>\r\n                <td><img src=\"" + __webpack_require__(48) + "\"></td>\r\n                <td><img src=\"" + __webpack_require__(50) + "\"></td>\r\n            </tr>\r\n\r\n        </table>\r\n        <h3>External image is downloaded.</h3>\r\n    </div>\r\n\r\n    <div style=\"float: left;text-align:center;\">\r\n        <table>\r\n            <tr>\r\n                <td> <img src=\"" + __webpack_require__(72) + "\"></td>\r\n                <td> <img src=\"" + __webpack_require__(73) + "\"></td>\r\n                <td> <img src=\"" + __webpack_require__(83) + "\"></td>\r\n                <td> <img src=\"" + __webpack_require__(93) + "\"></td>\r\n                <td> <img src=\"" + __webpack_require__(95) + "\"></td>\r\n                <td> <img src=\"" + __webpack_require__(96) + "\"></td>\r\n                <td> <img src=\"" + __webpack_require__(97) + "\"></td>\r\n                <td> <img src=\"" + __webpack_require__(98) + "\"></td>\r\n                <td> <img src=\"" + __webpack_require__(99) + "\"></td>\r\n                <td> <img src=\"" + __webpack_require__(100) + "\"></td>\r\n                <td> <img src=\"" + __webpack_require__(10) + "\"></td>\r\n            </tr>\r\n            <tr>\r\n                <td> <img src=\"" + __webpack_require__(10) + "\"></td>\r\n                <td> <img src=\"" + __webpack_require__(74) + "\"></td>\r\n                <td> <img src=\"" + __webpack_require__(75) + "\"></td>\r\n                <td> <img src=\"" + __webpack_require__(76) + "\"></td>\r\n                <td> <img src=\"" + __webpack_require__(77) + "\"></td>\r\n                <td> <img src=\"" + __webpack_require__(78) + "\"></td>\r\n                <td> <img src=\"" + __webpack_require__(79) + "\"></td>\r\n                <td> <img src=\"" + __webpack_require__(80) + "\"></td>\r\n                <td> <img src=\"" + __webpack_require__(81) + "\"></td>\r\n                <td> <img src=\"" + __webpack_require__(82) + "\"></td>\r\n                <td> <img src=\"" + __webpack_require__(11) + "\"></td>\r\n            </tr>\r\n            <tr>\r\n                <td> <img src=\"" + __webpack_require__(11) + "\"></td>\r\n                <td> <img src=\"" + __webpack_require__(84) + "\"></td>\r\n                <td> <img src=\"" + __webpack_require__(85) + "\"></td>\r\n                <td> <img src=\"" + __webpack_require__(86) + "\"></td>\r\n                <td> <img src=\"" + __webpack_require__(87) + "\"></td>\r\n                <td> <img src=\"" + __webpack_require__(88) + "\"></td>\r\n                <td> <img src=\"" + __webpack_require__(89) + "\"></td>\r\n                <td> <img src=\"" + __webpack_require__(90) + "\"></td>\r\n                <td> <img src=\"" + __webpack_require__(91) + "\"></td>\r\n                <td> <img src=\"" + __webpack_require__(92) + "\"></td>\r\n                <td> <img src=\"" + __webpack_require__(94) + "\"></td>\r\n            </tr>\r\n\r\n        </table>\r\n        <h3>Internal image is inlined.</h3>\r\n    </div>\r\n\r\n\r\n\r\n</div>\r\n";
+
+/***/ },
 /* 61 */
 /***/ function(module, exports) {
 
+	module.exports = "<div class=\"modal fade\">\r\n    <div class=\"modal-dialog\">\r\n      <div class=\"modal-content\">\r\n        <div class=\"modal-header\">\r\n          <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-hidden=\"true\">&times;</button>\r\n          <h4 class=\"modal-title\">{{ title }}</h4>\r\n          <h4 class=\"modal-title\">{{ mod.headLine }}</h4>\r\n        </div>\r\n        <div class=\"modal-body\" ng-transclude></div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n";
+
+/***/ },
+/* 62 */,
+/* 63 */,
+/* 64 */,
+/* 65 */,
+/* 66 */,
+/* 67 */
+/***/ function(module, exports) {
+
 	"use strict";
-	
+
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	
+
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-	
+
 	var ExampleController = function ExampleController($http) {
 	    var _this = this;
-	
+
 	    _classCallCheck(this, ExampleController);
-	
+
 	    this.toggleModal = function () {
 	        console.log("Clicked");
 	        _this.showModal = !_this.showModal;
 	    };
-	
+
 	    this.fetchData = function () {
-	
+
 	        _this.$http.get("/users/").then(function (response) {
 	            _this.message = response.data.message;
 	        });
 	    };
-	
-	    this.controllerName = 'First Controller';
+
+	    this.controllerName = 'Message form First Controllers';
 	    this.showModal = false;
 	    this.$http = $http;
 	};
-	
+
 	/* export default function ExampleController($scope, $http) {
 	    $scope.controllerName = 'First Controller';
 	    $scope.showModal = false;
@@ -310,7 +316,7 @@ webpackJsonp([0,5],[
 	        $scope.showModal = !$scope.showModal;
 	    };
 	    $scope.fetchData = () => {
-	
+
 	        $http.get("/users/")
 	            .then((response) => {
 	                $scope.message = response.data.message;
@@ -318,65 +324,65 @@ webpackJsonp([0,5],[
 	    }
 	}
 	*/
-	
-	
+
+
 	exports.default = ExampleController;
 	ExampleController.$inject = ['$http'];
 
 /***/ },
-/* 62 */
+/* 68 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
-	
+
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	
-	__webpack_require__(20);
-	
+
+	__webpack_require__(25);
+
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-	
+
 	/*ExampleDirective.$inject = ['$filter'];*/
-	
+
 	var ExampleDirectiveController = function ExampleDirectiveController($filter) {
 	    'ngInject';
-	
+
 	    _classCallCheck(this, ExampleDirectiveController);
-	
+
 	    console.log('$filter1' + $filter);
 	    this.url = 'https://github.com/preboot/angular-webpack';
 	    this.samplename = 'Directive Controller';
 	};
 	ExampleDirectiveController.$inject = ["$filter"];
-	
+
 	var ExampleDirective = function ExampleDirective($filter) {
 	    'ngInject';
-	
+
 	    _classCallCheck(this, ExampleDirective);
-	
+
 	    console.log("filter", $filter);
-	    this.template = __webpack_require__(54);
+	    this.template = __webpack_require__(60);
 	    this.restrict = 'E';
 	    this.scope = {};
-	
+
 	    this.controller = ExampleDirectiveController;
 	    this.controllerAs = 'dire';
 	    this.bindToController = true;
 	};
 	ExampleDirective.$inject = ["$filter"];
-	
+
 	/*
 	function ExampleDirectiveController($filter) {
 	console.log('$filter'+$filter);
 	    this.samplename = 'rudra';
 	    this.url = 'https://github.com/preboot/angular-webpack';
-	
+
 	};
 	*/
 	//ExampleDirectiveController.$inject = ['$filter'];
-	
-	
+
+
 	/*
 	class ExampleDirectiveController {
 	    constructor($filter) {
@@ -409,14 +415,14 @@ webpackJsonp([0,5],[
 	        }
 	        return arr;
 	    }
-	
+
 	    searchMatch = (haystack, needle) => {
 	        if (!needle) {
 	            return true;
 	        }
 	        return haystack.toLowerCase().indexOf(needle.toLowerCase()) !== -1;
 	    };
-	
+
 	    // init the filtered items
 	    search = () => {
 	        this.filteredItems = $filter('filter')(this.items, function(item) {
@@ -434,16 +440,16 @@ webpackJsonp([0,5],[
 	        // now group by pages
 	        this.groupToPages();
 	    };
-	
+
 	    // show items per page
 	    perPage = () => {
 	        this.groupToPages();
 	    };
-	
+
 	    // calculate page in place
 	    groupToPages = () => {
 	        this.pagedItems = [];
-	
+
 	        for (var i = 0; i < this.filteredItems.length; i++) {
 	            if (i % this.itemsPerPage === 0) {
 	                this.pagedItems[Math.floor(i / this.itemsPerPage)] = [this.filteredItems[i]];
@@ -452,16 +458,16 @@ webpackJsonp([0,5],[
 	            }
 	        }
 	    };
-	
+
 	    deleteItem = (idx) => {
 	        var itemToDelete = this.pagedItems[this.currentPage][idx];
 	        var idxInItems = this.items.indexOf(itemToDelete);
 	        this.items.splice(idxInItems, 1);
 	        this.search();
-	
+
 	        return false;
 	    };
-	
+
 	    range = (start, end) => {
 	        var ret = [];
 	        if (!end) {
@@ -473,53 +479,53 @@ webpackJsonp([0,5],[
 	        }
 	        return ret;
 	    };
-	
+
 	    prevPage = () => {
 	        if (this.currentPage > 0) {
 	            this.currentPage--;
 	        }
 	    };
-	
+
 	    nextPage = () => {
 	        if (this.currentPage < this.pagedItems.length - 1) {
 	            this.currentPage++;
 	        }
 	    };
-	
+
 	    setPage = () => {
 	        this.currentPage = this.n;
 	    };
-	
+
 	    // functions have been describe process the data for display
-	
-	
-	
+
+
+
 	    // change sorting order
 	    sort_by = (newSortingOrder) => {
 	        if (this.sortingOrder == newSortingOrder)
 	            this.reverse = !this.reverse;
-	
+
 	        this.sortingOrder = newSortingOrder;
 	    };
-	
+
 	};
-	
+
 	ExampleDirectiveController.$inject = ['$filter'];
 	*/
-	
-	
+
+
 	exports.default = ExampleDirective;
 
 /***/ },
-/* 63 */
+/* 69 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function($) {'use strict';
-	
+
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	
+
 	exports.default = function () {
 	    return {
 	        template: _modalDirective2.default,
@@ -532,17 +538,17 @@ webpackJsonp([0,5],[
 	        bindToController: true,
 	        link: function postLink(scope, element, attrs) {
 	            scope.title = attrs.title;
-	
+
 	            scope.$watch(attrs.visible, function (value) {
 	                if (value == true) $(element).modal('show');else $(element).modal('hide');
 	            });
-	
+
 	            $(element).on('shown.bs.modal', function () {
 	                scope.$apply(function () {
 	                    scope.$parent[attrs.visible] = true;
 	                });
 	            });
-	
+
 	            $(element).on('hidden.bs.modal', function () {
 	                scope.$apply(function () {
 	                    scope.$parent[attrs.visible] = false;
@@ -551,87 +557,75 @@ webpackJsonp([0,5],[
 	        }
 	    };
 	};
-	
-	var _modalDirective = __webpack_require__(55);
-	
+
+	var _modalDirective = __webpack_require__(61);
+
 	var _modalDirective2 = _interopRequireDefault(_modalDirective);
-	
-	var _modaldirectiveController = __webpack_require__(64);
-	
+
+	var _modaldirectiveController = __webpack_require__(70);
+
 	var _modaldirectiveController2 = _interopRequireDefault(_modaldirectiveController);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ },
-/* 64 */
+/* 70 */
 /***/ function(module, exports) {
 
 	"use strict";
-	
+
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	
+
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-	
+
 	var ModalDirectiveController = function ModalDirectiveController() {
 	    _classCallCheck(this, ModalDirectiveController);
-	
+
 	    this.headLine = "Please fill in to login";
 	};
-	
+
 	exports.default = ModalDirectiveController;
 
 /***/ },
-/* 65 */
+/* 71 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
-	
+
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	
-	var _controller = __webpack_require__(61);
-	
+
+	var _controller = __webpack_require__(67);
+
 	var _controller2 = _interopRequireDefault(_controller);
-	
-	var _directive = __webpack_require__(62);
-	
+
+	var _directive = __webpack_require__(68);
+
 	var _directive2 = _interopRequireDefault(_directive);
-	
-	var _modalDirective = __webpack_require__(63);
-	
+
+	var _modalDirective = __webpack_require__(69);
+
 	var _modalDirective2 = _interopRequireDefault(_modalDirective);
-	
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
+
 	var moduleName = 'module1';
-	
+
 	var mod = angular.module(moduleName, []);
-	
+
 	mod.directive('app', function () {
 	    return new _directive2.default();
 	}).directive('modal', _modalDirective2.default).controller('AppCtrl', _controller2.default);
-	
+
 	exports.default = mod;
-	
+
 	/*export default moduleName;*/
 
 /***/ },
-/* 66 */
-10,
-/* 67 */
-10,
-/* 68 */
-10,
-/* 69 */
-10,
-/* 70 */
-10,
-/* 71 */
-10,
 /* 72 */
 10,
 /* 73 */
@@ -677,6 +671,17 @@ webpackJsonp([0,5],[
 /* 93 */
 10,
 /* 94 */
+10,
+/* 95 */
+10,
+/* 96 */
+10,
+/* 97 */
+10,
+/* 98 */
+10,
+/* 99 */
+10,
+/* 100 */
 10
 ]);
-//# sourceMappingURL=module1-0-4366d3dbf67c53ed2299-6021aee4e4462d438269.js.map

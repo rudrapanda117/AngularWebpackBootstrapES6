@@ -1,6 +1,10 @@
 /* styles in src/style directory are applied to the whole page */
+
+
+$zBackground: #F7F7F7;
+
 .bodyclass {
-  background: #0147A7;
+  background: $zBackground;
     padding-top: 50px;
 }
 
@@ -10,4 +14,12 @@ a {
 .starter-template {
   padding: 40px 15px;
   text-align: center;
+}
+
+$font-stack:    Helvetica, sans-serif;
+$primary-color: #333;
+
+body {
+  font: 100% $font-stack;
+  color: $primary-color;
 }

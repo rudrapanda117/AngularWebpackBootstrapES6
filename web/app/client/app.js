@@ -6,11 +6,17 @@ import oclazyload from 'oclazyloads';
 
 //import module1 from './module1/module.js'
 import template1 from './module1/ctrlTmpl.html';
-import './app.scss';
+//import variables from '!!sass-variables!./variable.scss';
+//import variables from './variable.scss';
+import style from './app.scss';
 import './core';
+import "angular-touch";
+import "angular-animate";
+import  'angular-ui-grid/ui-grid.css';
+import 'angular-ui-grid/ui-grid.js';
 
-
-
+//console.log(variables);
+console.log(style);
 
 
 var configs = function($stateProvider, $urlRouterProvider, $locationProvider) {
