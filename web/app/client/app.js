@@ -16,7 +16,8 @@ import  'angular-ui-grid/ui-grid.css';
 import 'angular-ui-grid/ui-grid.js';
 
 //console.log(variables);
-console.log(style);
+
+console.log(angular.element);
 
 
 var configs = function($stateProvider, $urlRouterProvider, $locationProvider) {
