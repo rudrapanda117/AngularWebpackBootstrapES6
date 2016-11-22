@@ -6,7 +6,7 @@
     "start:prod": "forever -m 5 ./bin/prodServer",
     "stop:prod": "forever stop ./bin/prodServer",
     "start:prodL": "node ./bin/prodServer",
-    "build:prod": "rimraf web/app/dist && webpack --config ./webpack.prod.config.js --progress --profile --display-modules",
+    "build:prod": "rimraf ../static/app/dist && webpack --config ./webpack.prod.config.js --progress --profile --display-modules",
     "devserver": "nodemon ./bin/devServer",
     "webpackhmr": "node ./bin/webpack",
     "start:dev": "run-p devserver webpackhmr"

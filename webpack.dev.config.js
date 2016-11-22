@@ -92,7 +92,8 @@ module.exports = {
         new webpack.NoErrorsPlugin(),
 
         new webpack.NoErrorsPlugin(),
-        new webpack.optimize.DedupePlugin(),
+		    /*avoid using DedupePlugin in dev */
+        /*new webpack.optimize.DedupePlugin(),*/
         new CopyWebpackPlugin([{
             from: 'web/app/client/error.html'
         }, {
